@@ -667,7 +667,7 @@ const QA_QUESTIONS = [
 
   // Módulo 6: Resolución de Escenarios
   {
-    module: "Resolución de Escenarios",
+    module: "La Evolución del QA Moderno",
     question: "Estás probando en el entorno de Staging y descubres un bug crítico. El entorno de Desarrollo funciona bien y nadie más puede reproducirlo. ¿Cuál es tu primer paso para investigar?",
     options: [
       "Reportar el bug inmediatamente y asignarlo a un desarrollador.",
@@ -679,7 +679,7 @@ const QA_QUESTIONS = [
     explanation: "Los bugs que solo ocurren en un entorno ('It works on my machine') suelen ser causados por diferencias de configuración, dependencias o datos. El primer paso lógico es investigar esas diferencias."
   },
   {
-    module: "Resolución de Escenarios",
+    module: "La Evolución del QA Moderno",
     question: "El equipo ha acumulado 'deuda técnica' en la automatización: los tests son lentos y fallan a menudo. El management quiere seguir añadiendo tests para nuevas funcionalidades. ¿Qué deberías proponer?",
     options: [
       "Continuar añadiendo nuevos tests como se solicita, ya que la cobertura es lo más importante.",
@@ -691,7 +691,7 @@ const QA_QUESTIONS = [
     explanation: "Ignorar la deuda técnica solo empeora el problema. Un QA estratégico aboga por la calidad del propio proceso de testing, negociando tiempo para mejorar la infraestructura y la fiabilidad de la automatización."
   },
   {
-    module: "Resolución de Escenarios",
+    module: "La Evolución del QA Moderno",
     question: "Se implementa un nuevo sistema de caché para mejorar el rendimiento. Tras el despliegue, la aplicación parece más rápida, pero los usuarios reportan ver datos desactualizados. ¿Qué tipo de pruebas se descuidaron probablemente?",
     options: [
       "Pruebas de humo (Smoke testing).",
@@ -703,7 +703,7 @@ const QA_QUESTIONS = [
     explanation: "La caché introduce complejidad. No es suficiente probar que los datos se cargan; es crucial probar que la caché se invalida (se borra) correctamente cuando los datos subyacentes cambian (ej. un usuario actualiza su perfil)."
   },
   {
-    module: "Resolución de Escenarios",
+    module: "La Evolución del QA Moderno",
     question: "Un desarrollador te dice: 'No puedo reproducir el bug, ciérralo'. Sin embargo, tú sigues pudiendo reproducirlo consistentemente en el entorno de QA. ¿Cuál es la mejor acción a seguir?",
     options: [
       "Cerrar el bug como solicita el desarrollador para evitar conflictos.",
@@ -715,7 +715,7 @@ const QA_QUESTIONS = [
     explanation: "El objetivo es la colaboración para resolver el problema. Proporcionar evidencia irrefutable (video) y ofrecerse a colaborar en tiempo real es la forma más efectiva de superar el 'no lo puedo reproducir'."
   },
   {
-    module: "Resolución de Escenarios",
+    module: "La Evolución del QA Moderno",
     question: "Un Product Owner te pide que valides una nueva funcionalidad, pero no existen historias de usuario ni criterios de aceptación formales. ¿Qué deberías hacer?",
     options: [
       "Rechazar la tarea hasta que la documentación esté completa y perfecta.",
@@ -727,7 +727,7 @@ const QA_QUESTIONS = [
     explanation: "Un QA proactivo no es un bloqueador, sino un facilitador. En lugar de esperar pasivamente, el QA debe liderar el esfuerzo para definir la calidad y los requisitos cuando estos son ambiguos, colaborando con el negocio."
   },
   {
-    module: "Resolución de Escenarios",
+    module: "La Evolución del QA Moderno",
     question: "Un test de API que siempre había funcionado empieza a fallar con un error '503 Service Unavailable'. El código de la aplicación no ha cambiado. ¿Cuál es la causa más probable?",
     options: [
       "Se ha introducido un bug en la lógica de la aplicación.",
@@ -739,7 +739,7 @@ const QA_QUESTIONS = [
     explanation: "Los errores del servidor de la serie 5xx indican un problema en el servidor. Un 503 específicamente significa que el servicio no está disponible, a menudo porque un componente crítico del que depende no está funcionando."
   },
   {
-    module: "Resolución de Escenarios",
+    module: "La Evolución del QA Moderno",
     question: "El equipo está a punto de lanzar una migración de base de datos importante. ¿Qué actividad de testing es la MÁS crítica para prevenir la pérdida o corrupción de datos?",
     options: [
       "Pruebas de UI para asegurar que la aplicación sigue funcionando después de la migración.",
@@ -751,7 +751,7 @@ const QA_QUESTIONS = [
     explanation: "En una migración, el mayor riesgo es la corrupción o pérdida de datos. La única forma de mitigar este riesgo es comparando directamente los datos de origen y destino para verificar que la migración se realizó correctamente."
   },
   {
-    module: "Resolución de Escenarios",
+    module: "La Evolución del QA Moderno",
     question: "Tu empresa está considerando adquirir una nueva herramienta de automatización de pruebas. ¿Qué factor debería ser el más importante en la decisión?",
     options: [
       "Elegir la herramienta más popular o la que está de moda en el mercado.",
@@ -763,7 +763,7 @@ const QA_QUESTIONS = [
     explanation: "Una herramienta solo es útil si el equipo puede usarla eficientemente y si encaja en el ecosistema tecnológico de la empresa. La mejor herramienta 'en el papel' puede ser un fracaso si nadie sabe cómo usarla o no se integra con el pipeline."
   },
   {
-    module: "Resolución de Escenarios",
+    module: "La Evolución del QA Moderno",
     question: "Se ha detectado un bug de seguridad crítico en producción. ¿Cuál es el rol del QA en el equipo de respuesta a incidentes?",
     options: [
       "El QA no tiene ningún rol, ya que es un problema de seguridad y no de calidad funcional.",
@@ -775,7 +775,7 @@ const QA_QUESTIONS = [
     explanation: "En una crisis, el rol del QA es crucial para validar que la solución de emergencia no solo corrige el problema, sino que no introduce nuevos fallos. La velocidad y la precisión en la validación son clave."
   },
   {
-    module: "Resolución de Escenarios",
+    module: "La Evolución del QA Moderno",
     question: "Se acerca el 'Black Friday' y se espera que el tráfico en tu e-commerce se multiplique por 10 durante el día, con picos extremos durante la primera hora de ofertas. ¿Qué tipo de prueba de rendimiento es la MÁS crítica para simular este escenario?",
     options: [
       "Pruebas de carga (Load Testing) para verificar cómo se comporta el sistema bajo la carga de usuarios esperada (10x).",
@@ -787,7 +787,7 @@ const QA_QUESTIONS = [
     explanation: "Cada tipo de prueba de rendimiento responde a una pregunta diferente. Para eventos de tráfico súbito y extremo como el Black Friday, el Spike Testing es la técnica más relevante para asegurar que la infraestructura puede manejar la explosión inicial de demanda."
   },
   {
-    module: "Resolución de Escenarios",
+    module: "La Evolución del QA Moderno",
     question: "Una funcionalidad en la aplicación móvil funciona perfectamente en la oficina usando WiFi, pero varios usuarios reportan que falla o es extremadamente lenta 'en la calle'. ¿Cuál es la causa más probable que debes investigar?",
     options: [
       "Un bug en el código que solo se activa fuera de la red de la oficina.",
@@ -807,7 +807,9 @@ const MODULE_ORDER = [
   "Técnicas de Prueba",
   "Gestión de Pruebas",
   "Automatización y Herramientas",
-  "Resolución de Escenarios"
+  "Pruebas No Funcionales Avanzadas",
+  "El QA en un Entorno DevOps",
+  "La Evolución del QA Moderno"
 ];
 
 const STUDY_SUGGESTIONS: { [key: string]: { title: string; description: string; steps: string[] } } = {
@@ -856,7 +858,25 @@ const STUDY_SUGGESTIONS: { [key: string]: { title: string; description: string; 
       "Investiga sobre 'Page Object Model' (POM). ¿Qué problema resuelve? ¿Por qué hace la automatización más mantenible?"
     ]
   },
-  "Resolución de Escenarios": {
+  "Pruebas No Funcionales Avanzadas": {
+    title: "Explorar Más Allá de lo Funcional",
+    description: "Una aplicación puede funcionar, pero si es lenta, insegura o confusa, no tiene calidad. Aquí es donde se separan los buenos QAs de los grandes QAs.",
+    steps: [
+      "Usa la herramienta Lighthouse de Chrome para analizar el rendimiento de una web que te guste. Intenta entender las métricas principales.",
+      "Aprende sobre la vulnerabilidad más común del OWASP Top 10: Inyección (Injection). ¿Qué es y cómo un QA podría ayudar a detectarla?",
+      "Piensa en una aplicación que te resulte difícil de usar. ¿Qué cambios harías para mejorar su usabilidad? Eso es pensar en UX."
+    ]
+  },
+  "El QA en un Entorno DevOps": {
+    title: "Acelerar la Entrega con Confianza",
+    description: "DevOps no es solo para desarrolladores. El QA moderno es una pieza clave para construir pipelines de CI/CD que entreguen valor de forma rápida y segura.",
+    steps: [
+      "Dibuja un pipeline de CI/CD simple. ¿En qué puntos colocarías 'Quality Gates' (puertas de calidad) y qué tipo de pruebas ejecutarías en cada una?",
+      "Investiga qué es la 'observabilidad' y cómo se diferencia del 'monitoreo' tradicional.",
+      "Entiende el concepto de 'fallar rápido' (fail fast). ¿Por qué es tan importante en un pipeline de CI/CD?"
+    ]
+  },
+  "La Evolución del QA Moderno": {
     title: "Evolucionar de Tester a Ingeniero de Calidad",
     description: "Esta es la diferencia entre un ejecutor de pruebas y un líder de calidad. Se trata de pensar en el 'porqué', no solo en el 'qué'.",
     steps: [
@@ -892,6 +912,15 @@ const STUDY_CONTENT: { [key: string]: { title: string; topics: { title: string; 
                     "<b>Pruebas Dinámicas:</b> Es la validación del software en ejecución. Incluye todas las pruebas funcionales y no funcionales que realizas interactuando con la aplicación.",
                     "<b>El Valor Real:</b> Un bug encontrado en una revisión de requisitos cuesta 1€ arreglarlo. El mismo bug encontrado en producción puede costar 1000€ (en tiempo de desarrollo, impacto al cliente, etc.)."
                 ]
+            },
+            {
+                title: "Verificación vs. Validación: La Diferencia Clave",
+                explanation: "Estos dos términos a menudo se usan indistintamente, pero representan dos preguntas fundamentales sobre la calidad que todo QA debe entender.",
+                keyPoints: [
+                    "<b>Verificación:</b> Pregunta '¿Estamos construyendo el producto <b>correctamente</b>?'. Se enfoca en el cumplimiento de los estándares, las especificaciones técnicas y las buenas prácticas. Las revisiones de código y las pruebas unitarias son ejemplos de verificación.",
+                    "<b>Validación:</b> Pregunta '¿Estamos construyendo el producto <b>correcto</b>?'. Se enfoca en si el producto satisface las necesidades reales del usuario y del negocio. Las pruebas de aceptación de usuario (UAT) y el testing exploratorio son ejemplos de validación.",
+                    "<b>En resumen:</b> La verificación se asegura de que sigas la receta. La validación se asegura de que el plato final sepa bien."
+                ]
             }
         ]
     },
@@ -916,6 +945,15 @@ const STUDY_CONTENT: { [key: string]: { title: string; topics: { title: string; 
                     "<b>Definition of Done (DoD):</b> Es el estándar de CALIDAD de TODO el equipo. Se aplica a TODAS las historias. Es una checklist que puede incluir: 'Pruebas unitarias pasan', 'Código revisado por un par', 'Pruebas de QA completadas', 'Documentación actualizada', etc.",
                     "<b>En la práctica:</b> Una historia no está 'Done' hasta que cumple tanto sus AC como la DoD del equipo."
                 ]
+            },
+            {
+                title: "Kanban para Equipos de QA: Enfocándose en el Flujo",
+                explanation: "No todos los equipos ágiles usan Scrum. Kanban se enfoca en el flujo continuo y en limitar el trabajo en progreso (WIP), lo que cambia el enfoque del QA.",
+                keyPoints: [
+                    "<b>El Objetivo es el Flujo:</b> En Kanban, tu prioridad no es terminar un 'sprint', sino asegurar que las tareas se muevan suavemente por el tablero de 'To Do' a 'Done'.",
+                    "<b>Limitar el WIP (Work In Progress):</b> Kanban limita cuántas tareas pueden estar en cada columna. Si la columna de 'Testing' está llena, tu trabajo no es empezar una nueva prueba, sino ayudar a desbloquear las existentes (colaborando con desarrolladores o POs).",
+                    "<b>Métricas Clave:</b> En lugar de la 'velocidad' de Scrum, en Kanban importan el 'Lead Time' (tiempo total desde que se pide hasta que se entrega) y el 'Cycle Time' (tiempo que se tarda en completar una tarea una vez iniciada). Tu trabajo como QA impacta directamente en estas métricas."
+                ]
             }
         ]
     },
@@ -930,6 +968,15 @@ const STUDY_CONTENT: { [key: string]: { title: string; topics: { title: string; 
                     "<b>Análisis de Valores Límite:</b> La mayoría de los errores ocurren en los bordes. Para el rango 1-100, los valores más importantes son 0, 1, 2 y 99, 100, 101.",
                     "<b>Tablas de Decisión:</b> Perfectas para reglas de negocio complejas. Ejemplo: un e-commerce con descuentos (Usuario VIP + Compra > 100€ = 15% off). Una tabla te asegura que pruebas todas las combinaciones posibles.",
                     "<b>Transición de Estados:</b> Ideal para flujos de trabajo. ¿Puede un pedido pasar de 'Entregado' a 'Cancelado'? Esta técnica te ayuda a diseñar pruebas para transiciones válidas e inválidas."
+                ]
+            },
+            {
+                title: "Smoke vs. Sanity vs. Regresión: ¿Cuándo y Por Qué?",
+                explanation: "Estos tres tipos de pruebas a menudo se confunden, pero tienen propósitos muy diferentes y se aplican en momentos distintos del ciclo de vida.",
+                keyPoints: [
+                    "<b>Smoke Test (Prueba de Humo):</b> Es una prueba RÁPIDA y SUPERFICIAL para decidir si una nueva build es lo suficientemente estable como para empezar a probarla en serio. ¿Arranca la aplicación? ¿Puedes hacer login? Si un Smoke Test falla, la build se rechaza inmediatamente.",
+                    "<b>Sanity Test (Prueba de Cordura):</b> Es una prueba RÁPIDA y PROFUNDA sobre un área específica que ha sido cambiada o corregida. Se usa para verificar que un bug ha sido solucionado y no ha roto nada obvio a su alrededor. Es un subconjunto de la regresión.",
+                    "<b>Regression Test (Prueba de Regresión):</b> Es una prueba AMPLIA y PROFUNDA para asegurar que los nuevos cambios no han roto funcionalidades existentes en otras partes de la aplicación. Puede ser manual o, idealmente, automatizada."
                 ]
             },
             {
@@ -975,6 +1022,15 @@ const STUDY_CONTENT: { [key: string]: { title: string; topics: { title: string; 
                 ]
             },
             {
+                title: "Estrategias Basadas en Riesgo (Risk-Based Testing)",
+                explanation: "Dado que no puedes probar todo, debes enfocar tu esfuerzo donde más importa. El testing basado en riesgo te ayuda a priorizar las pruebas según el impacto y la probabilidad de fallo.",
+                keyPoints: [
+                    "<b>Identificar Riesgos:</b> Haz una lluvia de ideas con el equipo: ¿Qué es lo peor que podría pasar? ¿Qué áreas del código son más complejas o han tenido más bugs en el pasado?",
+                    "<b>Analizar Riesgos:</b> Para cada riesgo, evalúa dos cosas: 1. La <b>probabilidad</b> de que ocurra. 2. El <b>impacto</b> en el negocio si ocurre.",
+                    "<b>Priorizar Pruebas:</b> Enfoca tus pruebas más profundas y tu esfuerzo de automatización en los riesgos con mayor probabilidad y mayor impacto. Un bug de bajo impacto y baja probabilidad puede ser aceptado para un lanzamiento, pero uno de alto impacto debe ser mitigado."
+                ]
+            },
+            {
                 title: "Estrategias de Datos de Prueba (Test Data Management)",
                 explanation: "Los tests inestables a menudo no son un problema del código de la app, sino de los datos de prueba. Una buena estrategia de datos es fundamental para una automatización fiable.",
                 keyPoints: [
@@ -1015,18 +1071,84 @@ const STUDY_CONTENT: { [key: string]: { title: string; topics: { title: string; 
                 ]
             },
             {
-                title: "QA en el Pipeline de CI/CD",
+                title: "Pruebas de Contrato (Contract Testing)",
+                explanation: "En un mundo de microservicios, las pruebas de integración tradicionales son lentas y frágiles. Las pruebas de contrato permiten a los equipos trabajar en paralelo con confianza.",
+                keyPoints: [
+                    "<b>El Problema:</b> El equipo de Frontend depende de la API del equipo de Backend. Si Backend cambia algo en la API, Frontend se rompe. ",
+                    "<b>La Solución:</b> Ambos equipos acuerdan un 'contrato' (un documento que define cómo debe ser la petición y la respuesta). El equipo de Backend prueba que su API cumple el contrato. El equipo de Frontend prueba que su aplicación puede consumir una respuesta que cumple el contrato.",
+                    "<b>Beneficio:</b> Permite detectar fallos de integración de forma muy temprana y rápida, sin necesidad de desplegar todo el sistema. Herramientas como PACT son populares para esto."
+                ]
+            }
+        ]
+    },
+    "Pruebas No Funcionales Avanzadas": {
+        title: "Probando los 'ilities': Rendimiento, Seguridad y Usabilidad",
+        topics: [
+            {
+                title: "Introducción a las Pruebas de Rendimiento",
+                explanation: "Las pruebas de rendimiento no son solo 'ver si la app es rápida'. Existen diferentes tipos para responder a diferentes preguntas de negocio.",
+                keyPoints: [
+                    "<b>Pruebas de Carga (Load Testing):</b> ¿El sistema soporta la carga de usuarios esperada? (Ej. 1000 usuarios concurrentes).",
+                    "<b>Pruebas de Estrés (Stress Testing):</b> ¿Cuál es el punto de quiebre del sistema? Se aumenta la carga hasta que la aplicación falla para ver cómo se comporta y se recupera.",
+                    "<b>Pruebas de Pico (Spike Testing):</b> ¿Cómo reacciona el sistema a un aumento súbito y masivo de usuarios? (Ej. el lanzamiento de entradas para un concierto, Black Friday).",
+                    "<b>Pruebas de Resistencia (Soak Testing):</b> ¿El sistema se mantiene estable bajo una carga normal durante un período prolongado? (Ej. 8 horas). Busca fugas de memoria y degradación del rendimiento."
+                ]
+            },
+            {
+                title: "Fundamentos de Seguridad para QA (Shift-Left Security)",
+                explanation: "La seguridad ya no es solo responsabilidad de un equipo especializado al final del ciclo. Un QA moderno debe tener una mentalidad de seguridad y conocer las vulnerabilidades más comunes.",
+                keyPoints: [
+                    "<b>OWASP Top 10:</b> Es una lista de los 10 riesgos de seguridad más críticos en aplicaciones web. Como QA, familiarizarte con ellos (ej. Inyección SQL, Cross-Site Scripting - XSS) te ayudará a diseñar mejores pruebas.",
+                    "<b>Mentalidad de 'Hacker Ético':</b> Piensa como un atacante. ¿Qué pasa si intento acceder a una URL que no me corresponde? ¿Qué pasa si inyecto código en un campo de texto? ¿Se exponen datos sensibles en las respuestas de la API?",
+                    "<b>Tu Rol:</b> No necesitas ser un experto en seguridad, pero puedes ser la primera línea de defensa, identificando comportamientos anómalos y colaborando con desarrolladores para probar parches de seguridad."
+                ]
+            },
+            {
+                title: "Pruebas de Usabilidad y Experiencia de Usuario (UX)",
+                explanation: "Una aplicación puede ser funcionalmente perfecta, pero si los usuarios no entienden cómo usarla, es un fracaso. La usabilidad es una parte clave de la calidad.",
+                keyPoints: [
+                    "<b>Consistencia:</b> ¿La aplicación se comporta de manera predecible? ¿Los botones y menús están siempre en el mismo lugar?",
+                    "<b>Claridad:</b> ¿Los mensajes de error son útiles y le dicen al usuario cómo solucionar el problema? ¿La navegación es intuitiva?",
+                    "<b>Eficiencia:</b> ¿Cuántos clicks se necesitan para completar una tarea común? ¿Hay atajos para usuarios expertos?",
+                    "<b>Feedback:</b> ¿El sistema le informa al usuario lo que está pasando (ej. mostrando un 'spinner' mientras carga datos)?"
+                ]
+            }
+        ]
+    },
+    "El QA en un Entorno DevOps": {
+        title: "Acelerando la Entrega con Confianza",
+        topics: [
+            {
+                title: "El Pipeline de CI/CD: El Rol del QA",
                 explanation: "La Integración y Entrega Continua (CI/CD) es el corazón de DevOps. El rol del QA es asegurar que el pipeline tenga las 'puertas de calidad' adecuadas para dar confianza en cada despliegue.",
                 keyPoints: [
                     "<b>¿Qué es?:</b> Un proceso automatizado que compila el código, ejecuta las pruebas y despliega la aplicación.",
                     "<b>Tu Rol:</b> Integrar los diferentes tipos de pruebas en el pipeline. Los tests unitarios se ejecutan en cada cambio. La suite de regresión de API se ejecuta antes de desplegar a un entorno de pruebas. Los tests de UI (más lentos) se pueden ejecutar por la noche.",
                     "<b>El Objetivo:</b> Feedback rápido. Si un desarrollador sube un cambio que rompe algo, el pipeline debe fallar en minutos y notificarle, no horas o días después."
                 ]
+            },
+            {
+                title: "Quality Gates: Definiendo Puntos de Control",
+                explanation: "Un 'Quality Gate' es una condición en tu pipeline de CI/CD que debe cumplirse para que el proceso continúe. Es una red de seguridad automatizada.",
+                keyPoints: [
+                    "<b>Ejemplos de Quality Gates:</b> 'La cobertura de código de los tests unitarios debe ser > 80%', 'No deben existir vulnerabilidades de seguridad críticas', 'La suite de regresión de API debe pasar al 100%'.",
+                    "<b>¿Por qué son importantes?:</b> Previenen que el código de baja calidad o con bugs conocidos llegue a entornos superiores o a producción de forma automática.",
+                    "<b>Colaboración:</b> Los Quality Gates deben ser definidos y acordados por todo el equipo, no solo por QA. Son un pacto de calidad."
+                ]
+            },
+            {
+                title: "Monitoreo y Observabilidad: Testing en Producción",
+                explanation: "La calidad no termina cuando el software se despliega. El QA moderno se interesa por cómo se comporta la aplicación en el mundo real, con usuarios reales.",
+                keyPoints: [
+                    "<b>Monitoreo:</b> Es observar métricas predefinidas para saber si el sistema funciona. (Ej. '¿Está el servidor caído?', '¿El uso de CPU es > 90%?').",
+                    "<b>Observabilidad:</b> Es la capacidad de hacer preguntas a tu sistema sin saber de antemano qué quieres preguntar. Se basa en logs, trazas y métricas detalladas para poder depurar problemas nuevos e inesperados en producción.",
+                    "<b>Tu Rol:</b> Colabora con el equipo para asegurar que la aplicación genere los logs y las trazas necesarias para poder investigar problemas en producción. Usa herramientas de observabilidad para entender el impacto real de las funcionalidades que pruebas."
+                ]
             }
         ]
     },
-    "Resolución de Escenarios": {
-        title: "La Evolución del QA Moderno",
+    "La Evolución del QA Moderno": {
+        title: "De Tester a Ingeniero de Calidad Estratégico",
         topics: [
             {
                 title: "De Tester a Ingeniero de Calidad: El Cambio de Mentalidad",
@@ -1047,13 +1169,12 @@ const STUDY_CONTENT: { [key: string]: { title: string; topics: { title: string; 
                 ]
             },
             {
-                title: "Tipos de Pruebas de Rendimiento y Cuándo Usarlas",
-                explanation: "Las pruebas de rendimiento no son solo 'ver si la app es rápida'. Existen diferentes tipos para responder a diferentes preguntas de negocio.",
+                title: "Cómo Comunicar Riesgos a Stakeholders",
+                explanation: "Tu habilidad para comunicar el estado de la calidad de forma clara y basada en datos es tan importante como tu habilidad para encontrar bugs.",
                 keyPoints: [
-                    "<b>Pruebas de Carga (Load Testing):</b> ¿El sistema soporta la carga de usuarios esperada? (Ej. 1000 usuarios concurrentes).",
-                    "<b>Pruebas de Estrés (Stress Testing):</b> ¿Cuál es el punto de quiebre del sistema? Se aumenta la carga hasta que la aplicación falla para ver cómo se comporta y se recupera.",
-                    "<b>Pruebas de Pico (Spike Testing):</b> ¿Cómo reacciona el sistema a un aumento súbito y masivo de usuarios? (Ej. el lanzamiento de entradas para un concierto, Black Friday).",
-                    "<b>Pruebas de Resistencia (Soak Testing):</b> ¿El sistema se mantiene estable bajo una carga normal durante un período prolongado? (Ej. 8 horas). Busca fugas de memoria y degradación del rendimiento."
+                    "<b>Habla en su Idioma:</b> En lugar de decir 'encontramos 5 bugs bloqueantes', di 'identificamos 5 riesgos que podrían impedir que los nuevos usuarios se registren, impactando nuestro objetivo de crecimiento'.",
+                    "<b>Usa Datos, no Opiniones:</b> Apoya tus afirmaciones con métricas. 'La cobertura de pruebas en el módulo de pagos es solo del 40%, lo que representa un alto riesgo' es más poderoso que 'creo que no hemos probado suficiente el módulo de pagos'.",
+                    "<b>Ofrece Opciones y Recomendaciones:</b> No solo presentes problemas. Propón un plan de mitigación. 'Dado el riesgo X, recomiendo que retrasemos el lanzamiento 2 días para enfocar las pruebas en esta área'."
                 ]
             }
         ]
@@ -1446,10 +1567,10 @@ const ResultsScreen = ({ user, userAnswers, onRestart, onFinishEvaluation }: { u
     const moduleOrder = MODULE_ORDER.filter(m => uniqueModules.includes(m));
 
     const sortedModuleResults = moduleOrder.map(moduleName => {
-        const result = moduleResults[moduleName];
-        const modulePercentage = result ? Math.round((result.correct / result.total) * 100) : 0;
+        const result = moduleResults[moduleName] || { correct: 0, total: 0 };
+        const modulePercentage = result.total > 0 ? Math.round((result.correct / result.total) * 100) : 0;
         return { name: moduleName, ...result, percentage: modulePercentage };
-    });
+    }).filter(mod => mod.total > 0);
     
     const improvementAreas = [...sortedModuleResults].sort((a,b) => a.percentage - b.percentage);
     const areasToImprove = (level === 'Trainee' || level === 'Junior (Jr)') ? improvementAreas.slice(0, 2) : improvementAreas.slice(0, 1);
@@ -1523,6 +1644,7 @@ const ResultsScreen = ({ user, userAnswers, onRestart, onFinishEvaluation }: { u
               <h3 className="text-xl font-bold text-amber-900 mb-2">Plan de Mejora Sugerido</h3>
               {results.areasToImprove.map((area, index) => {
                   const suggestion = STUDY_SUGGESTIONS[area.name];
+                  if (!suggestion) return null;
                   return (
                       <div key={index} className={index > 0 ? "mt-4" : ""}>
                           <h4 className="font-bold text-slate-800 text-lg">{suggestion.title}</h4>
@@ -1730,8 +1852,6 @@ const StudyScreen = ({ onBackToHome }: { onBackToHome: () => void }) => {
         }
     };
     
-    const uniqueModules = [...new Set(QA_QUESTIONS.map(q => q.module))];
-    const moduleOrder = MODULE_ORDER.filter(m => uniqueModules.includes(m));
     const moduleContent = selectedModule ? STUDY_CONTENT[selectedModule] : null;
 
     return (
@@ -1745,7 +1865,7 @@ const StudyScreen = ({ onBackToHome }: { onBackToHome: () => void }) => {
 
             {!selectedModule ? (
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                    {moduleOrder.map(moduleName => (
+                    {MODULE_ORDER.map(moduleName => (
                         <button 
                             key={moduleName}
                             onClick={() => setSelectedModule(moduleName)}
