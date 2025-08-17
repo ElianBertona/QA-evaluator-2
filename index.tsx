@@ -813,317 +813,247 @@ const MODULE_ORDER = [
 const STUDY_SUGGESTIONS: { [key: string]: { title: string; description: string; steps: string[] } } = {
   "Fundamentos de Pruebas": {
     title: "Reforzar los Pilares del Testing",
-    description: "Estos conceptos son la base de todo el trabajo de QA. Dominarlos te permitirá tomar mejores decisiones y comunicarte de forma más efectiva.",
+    description: "Estos principios no son teoría aburrida, son las reglas del juego. Interiorizarlos te convierte en un QA que aporta valor estratégico, no solo un 'buscador de bugs'.",
     steps: [
-      "Memoriza y entiende los 7 Principios de ISTQB. Intenta dar un ejemplo práctico de cada uno.",
-      "Dibuja un diagrama explicando la diferencia entre Pruebas Estáticas (revisiones) y Dinámicas (ejecución).",
-      "Lee sobre el Proceso de Pruebas Fundamental y cómo se aplica en un proyecto real."
-    ]
-  },
-  "Pruebas en el Ciclo de Vida": {
-    title: "Entender el Cuándo y el Porqué de las Pruebas",
-    description: "Saber qué tipo de prueba aplicar en cada momento del ciclo de vida es clave para la eficiencia y la detección temprana de errores.",
-    steps: [
-      "Compara el Modelo V y un ciclo de vida Ágil (Scrum). ¿Dónde encajan las pruebas en cada uno?",
-      "Crea un mapa mental de los Niveles de Prueba (Componente, Integración, Sistema, Aceptación).",
-      "Define con tus propias palabras la diferencia entre Pruebas Funcionales y No Funcionales (rendimiento, usabilidad, seguridad)."
-    ]
-  },
-  "Técnicas de Prueba": {
-    title: "Diseñar Pruebas Inteligentes, no solo Abundantes",
-    description: "No se trata de probarlo todo, sino de probar lo correcto. Estas técnicas te ayudan a maximizar la detección de errores con el mínimo esfuerzo.",
-    steps: [
-      "Toma un formulario simple (ej. un login) y aplica Partición de Equivalencia y Análisis de Valores Límite.",
-      "Explica la diferencia entre Caja Negra (sin ver el código) y Caja Blanca (viendo el código).",
-      "Busca un ejemplo de una Tabla de Decisión y entiende cómo ayuda a simplificar reglas de negocio complejas."
-    ]
-  },
-  "Gestión de Pruebas": {
-    title: "Organizar, Planificar y Comunicar la Calidad",
-    description: "Un buen QA no solo ejecuta pruebas, también las gestiona. Esto implica planificar, reportar y entender el proceso de desarrollo.",
-    steps: [
-      "Busca una plantilla de 'Plan de Pruebas' y familiarízate con sus secciones (alcance, riesgos, criterios de salida).",
-      "Analiza el ciclo de vida de un defecto (Nuevo -> Asignado -> Corregido -> Verificado -> Cerrado).",
-      "Investiga qué son los 'Criterios de Aceptación' en una Historia de Usuario y por qué son tan importantes para QA."
-    ]
-  },
-  "Automatización y Herramientas": {
-    title: "Potenciar el Testing con Tecnología",
-    description: "La automatización es una habilidad clave en el mercado actual. Entender sus conceptos y herramientas te abrirá muchas puertas.",
-    steps: [
-      "Dibuja y explica la Pirámide de Automatización de Pruebas (Unitaria, API, UI).",
-      "Investiga qué es Selenium y para qué se usa. Haz lo mismo con Postman.",
-      "Lee sobre el patrón de diseño 'Page Object Model' (POM) y por qué es tan importante para mantener el código de automatización."
-    ]
-  },
-  "Resolución de Escenarios": {
-    title: "Aplicar el Conocimiento en el Mundo Real",
-    description: "Esta área mide tu experiencia y tu capacidad para tomar decisiones. Se mejora enfrentando problemas reales y pensando críticamente.",
-    steps: [
-      "Piensa en el último bug complicado que encontraste. ¿Cómo lo comunicaste? ¿Cómo se podría haber prevenido?",
-      "Practica el 'pensamiento basado en riesgos'. Para una nueva funcionalidad, haz una lista de '¿qué es lo peor que podría pasar?'.",
-      "Cuando dudes sobre un requisito, escribe la pregunta que le harías al Product Owner. La comunicación clara es una habilidad clave."
+      "Para la 'Paradoja del Pesticida', piensa: ¿cómo podrías mejorar una suite de regresión existente para que siga siendo efectiva?",
+      "Explica con un ejemplo real la diferencia entre 'verificación' (¿lo construimos bien?) y 'validación' (¿construimos lo correcto?).",
+      "Practica el 'Shift-Left': la próxima vez que veas un requisito, intenta escribir 3 'preguntas de QA' antes de que se escriba una línea de código."
     ]
   },
   "Metodologías Ágiles y Scrum": {
-    title: "Dominar el Framework Ágil",
-    description: "Comprender Scrum y la mentalidad ágil es fundamental, ya que es el entorno donde la mayoría de los equipos de QA operan hoy en día.",
+    title: "Integrarse como un Campeón de la Calidad",
+    description: "En Agile, no eres un 'tester' al final del proceso. Eres un miembro del equipo de desarrollo desde el día cero. Tu influencia en la calidad es constante.",
     steps: [
-        "Memoriza los 3 roles de Scrum (Product Owner, Scrum Master, Equipo de Desarrollo) y sus responsabilidades.",
-        "Dibuja el ciclo de un Sprint, incluyendo los 4 eventos principales: Planning, Daily, Review y Retrospective.",
-        "Lee el Manifiesto Ágil y reflexiona sobre cómo sus valores impactan el trabajo diario de un tester."
+      "Define tu rol en cada ceremonia Scrum: ¿Cuál es tu objetivo en la Planning? ¿Y en la Retrospectiva?",
+      "Compara la 'Definition of Done' de tu equipo con los 'Criterios de Aceptación' de la última historia en la que trabajaste. ¿Ves la diferencia?",
+      "Explica por qué la calidad es 'responsabilidad de todo el equipo' y qué significa eso para tu trabajo diario."
+    ]
+  },
+  "Técnicas de Prueba": {
+    title: "Diseñar Pruebas Inteligentes, no Abundantes",
+    description: "Tu recurso más valioso es tu tiempo. Estas técnicas te ayudan a maximizar la probabilidad de encontrar bugs importantes con el mínimo esfuerzo.",
+    steps: [
+      "Toma el formulario de registro de cualquier app y diseña 5 casos de prueba usando Análisis de Valores Límite y Partición de Equivalencia.",
+      "Inicia una 'sesión de testing exploratorio' de 30 minutos en una app que uses a diario. Define un objetivo y toma notas. Verás cuántos bugs encuentras.",
+      "Aprende a hacer una auditoría básica de accesibilidad (a11y): navega una web solo con el teclado. ¿Puedes llegar a todos lados? ¿Ves dónde estás?"
+    ]
+  },
+  "Gestión de Pruebas": {
+    title: "Gestionar la Calidad y Comunicar el Riesgo",
+    description: "Un QA senior no solo reporta bugs, sino que comunica el estado de la calidad de forma que el negocio pueda tomar decisiones informadas.",
+    steps: [
+      "Escribe un reporte de bug 'perfecto' para un problema que encontraste recientemente. Incluye video, logs y un título claro.",
+      "Piensa en un bug con 'Severidad Baja' pero 'Prioridad Alta'. ¿Qué escenario de negocio podría causarlo?",
+      "La próxima vez que termines de probar una historia, en lugar de decir 'listo', intenta decir: 'He validado los criterios de aceptación y no he encontrado riesgos bloqueantes'."
+    ]
+  },
+  "Automatización y Herramientas": {
+    title: "Multiplicar tu Impacto con Automatización",
+    description: "La automatización no es para reemplazar a los QAs, es para darles superpoderes. Te libera de tareas repetitivas para que puedas enfocarte en problemas complejos.",
+    steps: [
+      "Dibuja la Pirámide de Automatización y explica con tus palabras por qué tener demasiados tests de UI es una mala idea.",
+      "Usa Postman para hacer una petición GET a una API pública (ej. 'pokeapi.co') y revisa la respuesta. Entiende qué son el status code y el body.",
+      "Investiga sobre 'Page Object Model' (POM). ¿Qué problema resuelve? ¿Por qué hace la automatización más mantenible?"
+    ]
+  },
+  "Resolución de Escenarios": {
+    title: "Evolucionar de Tester a Ingeniero de Calidad",
+    description: "Esta es la diferencia entre un ejecutor de pruebas y un líder de calidad. Se trata de pensar en el 'porqué', no solo en el 'qué'.",
+    steps: [
+      "Practica el 'Análisis de Causa Raíz': para el último bug de producción, pregúntate '¿Por qué ocurrió?' cinco veces para llegar al problema de fondo.",
+      "Identifica un área fuera del testing donde te gustaría aprender más (ej. cómo funciona una API REST, principios básicos de UX). Dedícale una hora esta semana.",
+      "Piensa en cómo tu trabajo impacta al usuario final. Este cambio de perspectiva te ayudará a priorizar mejor y a defender la calidad con más fuerza."
     ]
   }
 };
 
 const STUDY_CONTENT: { [key: string]: { title: string; topics: { title: string; explanation: string; keyPoints: string[] }[] } } = {
     "Fundamentos de Pruebas": {
-        title: "Fundamentos de Pruebas",
+        title: "Principios Aplicados: La Mentalidad QA",
         topics: [
             {
-                title: "Los 7 Principios del Testing",
-                explanation: "ISTQB define siete principios que son la base filosófica del testing de software. Comprenderlos ayuda a crear estrategias de prueba eficientes y a gestionar las expectativas.",
+                title: "Los 7 Principios en la Práctica Diaria",
+                explanation: "Estos no son solo reglas teóricas, son guías que resuelven problemas reales. Entender su aplicación práctica te ayudará a tomar mejores decisiones cada día.",
                 keyPoints: [
-                    "<b>1. Las pruebas demuestran la presencia de defectos:</b> Las pruebas solo pueden confirmar que hay defectos, no pueden probar que no los hay.",
-                    "<b>2. Las pruebas exhaustivas son imposibles:</b> Probar todas las combinaciones de entradas y precondiciones es inviable, por lo que se debe usar el análisis de riesgos y las prioridades.",
-                    "<b>3. Pruebas tempranas:</b> Iniciar las pruebas lo antes posible en el ciclo de vida (Shift-Left) ahorra tiempo y dinero, ya que los defectos son más baratos de corregir al principio.",
-                    "<b>4. Agrupación de defectos (Defect clustering):</b> Un pequeño número de módulos suele contener la mayoría de los defectos. Esto ayuda a enfocar los esfuerzos de prueba.",
-                    "<b>5. La paradoja del pesticida:</b> Si se repiten los mismos casos de prueba una y otra vez, con el tiempo dejarán de encontrar nuevos defectos. Es necesario revisar y actualizar las pruebas.",
-                    "<b>6. Las pruebas dependen del contexto:</b> La forma de probar una app de e-commerce es diferente a la de un software médico. El contexto (riesgo, industria, tecnología) lo define todo.",
-                    "<b>7. La falacia de la ausencia de errores:</b> Encontrar y corregir defectos no servirá de nada si el sistema construido es inutilizable o no cumple con las necesidades del usuario."
+                    "<b>1. Las pruebas demuestran presencia de defectos:</b> Nunca digas 'la aplicación no tiene errores'. Di 'las pruebas que ejecutamos no encontraron errores'. Esto gestiona las expectativas y comunica la realidad del testing.",
+                    "<b>2. Las pruebas exhaustivas son imposibles:</b> Cuando un PM te pida 'probar todo', responde con: 'Para probarlo de la forma más efectiva, vamos a aplicar un enfoque basado en riesgos. ¿Cuáles son las áreas más críticas para el negocio?'.",
+                    "<b>3. Pruebas tempranas (Shift-Left):</b> Tu trabajo empieza en la revisión de requisitos. Una pregunta a tiempo ('¿Qué pasa si el usuario introduce un email inválido?') es 100 veces más barata que un bug reportado después del desarrollo.",
+                    "<b>4. Agrupación de defectos:</b> Si notas que el 80% de los bugs vienen del módulo de pagos, enfoca tus pruebas de regresión más profundas ahí. Usa los datos para guiar tu esfuerzo.",
+                    "<b>5. La paradoja del pesticida:</b> Si tu suite de regresión automatizada siempre pasa, no significa que el sistema sea perfecto. Significa que tus tests se han vuelto obsoletos. Rota los datos de prueba, añade nuevos escenarios y varía los flujos.",
+                    "<b>6. Las pruebas dependen del contexto:</b> No pruebas igual una landing page de marketing (donde lo visual es clave) que una API de transacciones bancarias (donde la seguridad y la precisión son todo). Adapta siempre tu estrategia.",
+                    "<b>7. La falacia de la ausencia de errores:</b> Un software puede funcionar perfectamente, pero si es incomprensible para el usuario, ha fallado. La usabilidad y la experiencia del usuario (UX) son parte de la calidad."
                 ]
             },
             {
-                title: "Proceso de Pruebas Fundamental",
-                explanation: "Es el conjunto de actividades clave que componen cualquier proceso de prueba formal, desde la planificación hasta el cierre.",
+                title: "Pruebas Estáticas vs. Dinámicas: Encontrando Bugs Sin Ejecutar Código",
+                explanation: "Las pruebas dinámicas (ejecutar la app) son obvias, pero las estáticas (revisar) son el arma secreta de un QA eficiente. Es la forma más pura de 'Shift-Left'.",
                 keyPoints: [
-                    "<b>Planificación y Control:</b> Definir los objetivos y el enfoque de las pruebas.",
-                    "<b>Análisis y Diseño:</b> Revisar la base de pruebas (requisitos) y diseñar los casos de prueba a alto nivel.",
-                    "<b>Implementación y Ejecución:</b> Desarrollar los casos de prueba y ejecutarlos.",
-                    "<b>Evaluación de Criterios de Salida y Reporte:</b> Comprobar si se han cumplido los objetivos y comunicar los resultados.",
-                    "<b>Actividades de Cierre de Pruebas:</b> Archivar los resultados y lecciones aprendidas."
-                ]
-            },
-            {
-                title: "Pruebas Estáticas vs. Dinámicas",
-                explanation: "Las pruebas no solo consisten en ejecutar el código. Se pueden encontrar defectos antes, revisando la documentación y el código fuente.",
-                keyPoints: [
-                    "<b>Pruebas Estáticas:</b> No se ejecuta el código. Se revisan documentos, requisitos o el código fuente para encontrar errores. (Ej: Revisiones de código, walkthroughs).",
-                    "<b>Pruebas Dinámicas:</b> Se ejecuta el software para validar su comportamiento. Es lo que comúnmente se entiende por 'probar'. (Ej: Pruebas unitarias, pruebas de sistema)."
-                ]
-            }
-        ]
-    },
-     "Pruebas en el Ciclo de Vida": {
-        title: "Pruebas en el Ciclo de Vida",
-        topics: [
-            {
-                title: "Niveles de Prueba",
-                explanation: "Las pruebas se organizan en niveles, cada uno con un objetivo específico, que van desde lo más pequeño (una función) hasta el sistema completo.",
-                keyPoints: [
-                    "<b>Pruebas de Componente (Unitarias):</b> Prueban unidades individuales de código (funciones, clases) de forma aislada. Generalmente realizadas por desarrolladores.",
-                    "<b>Pruebas de Integración:</b> Verifican la interacción entre componentes o sistemas. El objetivo es encontrar fallos en las interfaces.",
-                    "<b>Pruebas de Sistema:</b> Evalúan el sistema completo e integrado para verificar que cumple con los requisitos especificados.",
-                    "<b>Pruebas de Aceptación:</b> Validan que el sistema cumple con las necesidades del usuario y del negocio. (Ej: UAT - User Acceptance Testing)."
-                ]
-            },
-            {
-                title: "Tipos de Prueba: Funcionales y No Funcionales",
-                explanation: "Las pruebas se pueden clasificar en dos grandes familias: las que prueban 'qué' hace el sistema y las que prueban 'cómo' lo hace.",
-                keyPoints: [
-                    "<b>Pruebas Funcionales:</b> Verifican las funciones del sistema. Responden a la pregunta: ¿Hace el software lo que se supone que debe hacer? (Ej: Probar un login, un formulario de compra).",
-                    "<b>Pruebas No Funcionales:</b> Evalúan las características de calidad del sistema. Responden a la pregunta: ¿Qué tan bien funciona el software? (Ej: Pruebas de Rendimiento, Usabilidad, Seguridad, Compatibilidad).",
-                    "<b>Pruebas de Caja Blanca/Negra:</b> Se refieren a la perspectiva del tester, no a un tipo de prueba. Se pueden aplicar a cualquier nivel."
-                ]
-            },
-            {
-                title: "Pruebas de Mantenimiento (Regresión y Confirmación)",
-                explanation: "Cuando un software existente es modificado, es crucial realizar pruebas para asegurar que los cambios no han introducido problemas nuevos.",
-                keyPoints: [
-                    "<b>Pruebas de Confirmación (Re-testing):</b> Se ejecutan para verificar que un defecto reportado ha sido <b>corregido</b> exitosamente.",
-                    "<b>Pruebas de Regresión:</b> Su objetivo es descubrir si los cambios (correcciones o nuevas funcionalidades) han afectado negativamente a características que <b>antes funcionaban</b>.",
-                    "La automatización es ideal para las suites de regresión, ya que son repetitivas y deben ejecutarse con frecuencia."
-                ]
-            },
-            {
-                title: "El Modelo V",
-                explanation: "El Modelo V es una representación gráfica de un ciclo de vida de desarrollo que ilustra cómo las actividades de prueba se corresponden con las de desarrollo. Enfatiza la verificación y la validación.",
-                keyPoints: [
-                    "<b>Análisis de Requisitos</b> se valida con <b>Pruebas de Aceptación</b>.",
-                    "<b>Diseño de Alto Nivel (Arquitectura)</b> se valida con <b>Pruebas de Sistema</b>.",
-                    "<b>Diseño de Bajo Nivel (Detallado)</b> se valida con <b>Pruebas de Integración</b>.",
-                    "<b>Codificación</b> se valida con <b>Pruebas de Componente (Unitarias)</b>."
-                ]
-            }
-        ]
-    },
-    "Técnicas de Prueba": {
-        title: "Técnicas de Prueba",
-        topics: [
-            {
-                title: "Categorías de Técnicas de Diseño de Pruebas",
-                explanation: "Las técnicas de prueba se agrupan en tres categorías principales según la información en la que se basan para diseñar los casos de prueba.",
-                keyPoints: [
-                   "<b>Caja Negra (Black Box):</b> Se basan en la especificación de requisitos, sin ver el código interno. Se enfocan en el comportamiento externo del sistema.",
-                    "<b>Caja Blanca (White Box):</b> Se basan en la estructura interna y el código del software. Se utilizan para medir la cobertura del código.",
-                    "<b>Basadas en la Experiencia:</b> Se basan en la intuición, habilidad y experiencia del tester. (Ej: Testing Exploratorio, Adivinación de Errores)."
-                ]
-            },
-            {
-                title: "Técnicas de Caja Negra",
-                explanation: "Estas técnicas son fundamentales para probar la funcionalidad desde la perspectiva del usuario.",
-                keyPoints: [
-                    "<b>Partición de Equivalencia:</b> Divide los datos de entrada en grupos de los que se espera un comportamiento similar. Se prueba un solo valor de cada grupo.",
-                    "<b>Análisis de Valores Límite:</b> Se enfoca en probar los 'límites' de las particiones (el valor mínimo, el máximo y los valores adyacentes). La mayoría de los errores se encuentran en los límites.",
-                    "<b>Tablas de Decisión:</b> Son ideales para probar reglas de negocio complejas con múltiples condiciones y acciones. Ayudan a cubrir todas las combinaciones.",
-                    "<b>Transición de Estados:</b> Se usa para probar sistemas que tienen diferentes estados y transiciones entre ellos (ej. un cajero automático, el estado de un pedido)."
-                ]
-            },
-            {
-                title: "Técnicas de Caja Blanca",
-                explanation: "Estas técnicas se centran en qué tan a fondo se ha probado el código fuente.",
-                keyPoints: [
-                    "<b>Cobertura de Sentencias:</b> Mide el porcentaje de líneas de código que han sido ejecutadas por las pruebas. Es la métrica más básica.",
-                    "<b>Cobertura de Decisión (o de Rama):</b> Mide si se han probado todos los resultados posibles de las decisiones en el código (las ramas 'true' y 'false' de un 'if'). Es más robusta que la de sentencias."
-                ]
-            },
-             {
-                title: "Técnicas Basadas en la Experiencia",
-                explanation: "Complementan a las técnicas formales y dependen de la habilidad del tester.",
-                keyPoints: [
-                    "<b>Adivinación de Errores (Error Guessing):</b> El tester usa su experiencia para 'adivinar' dónde es probable que los desarrolladores hayan cometido errores (ej. división por cero, campos vacíos).",
-                    "<b>Testing Exploratorio:</b> Es un enfoque donde el aprendizaje, el diseño de pruebas y la ejecución ocurren de forma simultánea. Es una actividad creativa y no guionada."
-                ]
-            }
-        ]
-    },
-    "Gestión de Pruebas": {
-        title: "Gestión de Pruebas",
-        topics: [
-            {
-                title: "Planificación y Documentación de Pruebas",
-                explanation: "La gestión de pruebas implica organizar y controlar el proceso. El documento principal para esto es el Plan de Pruebas.",
-                keyPoints: [
-                    "<b>Plan de Pruebas:</b> Documento que describe el alcance, enfoque, recursos y cronograma de las actividades de prueba. Define qué se va a probar, quién, cuándo y cómo.",
-                    "<b>Criterios de Entrada (Entry Criteria):</b> Condiciones que deben cumplirse para poder <b>comenzar</b> una fase de pruebas.",
-                    "<b>Criterios de Salida (Exit Criteria):</b> Condiciones que deben cumplirse para poder <b>finalizar</b> una fase de pruebas (ej. 95% de casos de prueba pasados, sin defectos bloqueantes)."
-                ]
-            },
-            {
-                title: "Gestión de Defectos",
-                explanation: "Un proceso formal para reportar, rastrear y gestionar los defectos desde su descubrimiento hasta su resolución.",
-                keyPoints: [
-                    "<b>Ciclo de Vida de un Defecto:</b> Nuevo -> Abierto/Asignado -> En Progreso -> Corregido -> Pendiente de Re-test -> Re-testeado -> Cerrado/Reabierto.",
-                    "<b>Reporte de Defecto Efectivo:</b> Debe ser claro, conciso y, sobre todo, contener <b>pasos para reproducirlo</b>. También incluye severidad (impacto) y prioridad (urgencia).",
-                    "<b>Fuga de Defectos (Defect Leakage):</b> Métrica que cuenta los defectos que 'escapan' de una fase de pruebas y son encontrados por el cliente. Mide la efectividad del proceso de QA."
-                ]
-            },
-            {
-                title: "Riesgo y Pruebas",
-                explanation: "Las pruebas basadas en riesgo ayudan a priorizar y enfocar los esfuerzos de prueba en las áreas más críticas del sistema.",
-                keyPoints: [
-                    "<b>Riesgo:</b> La posibilidad de que ocurra un evento negativo. Se mide por la <b>probabilidad</b> de que ocurra y el <b>impacto</b> si ocurre.",
-                    "Las áreas de mayor riesgo (alta probabilidad y alto impacto) deben ser probadas de forma más exhaustiva y temprana.",
-                    "Esta priorización es la respuesta a por qué las pruebas exhaustivas son imposibles."
-                ]
-            }
-        ]
-    },
-    "Automatización y Herramientas": {
-        title: "Automatización y Herramientas",
-        topics: [
-            {
-                title: "La Pirámide de Automatización de Pruebas",
-                explanation: "Es un modelo conceptual que guía la estrategia de automatización. Sugiere cómo distribuir los esfuerzos de automatización en diferentes capas para lograr una suite de pruebas rápida, estable y confiable.",
-                keyPoints: [
-                    "<b>Base (la más ancha): Pruebas Unitarias.</b> Debe haber muchas. Son rápidas de ejecutar, estables y baratas de mantener.",
-                    "<b>Medio: Pruebas de API/Integración/Servicio.</b> Menos que las unitarias. Prueban la lógica de negocio sin la sobrecarga de la UI.",
-                    "<b>Cima (la más estrecha): Pruebas de UI (End-to-End).</b> Debe haber pocas. Son lentas, frágiles (se rompen con cambios visuales) y caras de mantener."
-                ]
-            },
-            {
-                title: "Herramientas Comunes por Tipo de Prueba",
-                explanation: "Existen muchas herramientas de testing, cada una especializada en un área concreta del proceso de software.",
-                keyPoints: [
-                    "<b>Automatización de UI Web:</b> <b>Selenium</b>, Cypress, Playwright.",
-                    "<b>Pruebas de API:</b> <b>Postman</b>, Insomnia, SoapUI.",
-                    "<b>Gestión de Proyectos/Defectos:</b> <b>Jira</b>, Trello, Azure DevOps.",
-                    "<b>Integración/Entrega Continua (CI/CD):</b> <b>Jenkins</b>, GitLab CI, GitHub Actions."
-                ]
-            },
-            {
-                title: "Patrones y Conceptos Clave en Automatización",
-                explanation: "Para que la automatización sea sostenible a largo plazo, es crucial seguir buenas prácticas y patrones de diseño.",
-                keyPoints: [
-                    "<b>Page Object Model (POM):</b> Un patrón de diseño que separa la lógica de las pruebas de la definición de la UI. Crea 'objetos de página' que representan las páginas de la aplicación, haciendo el código más mantenible y legible.",
-                    "<b>Localizadores (Locators):</b> Son la forma en que un script de automatización encuentra un elemento en la UI (por ID, CSS Selector, XPath). Un buen localizador debe ser único y estable.",
-                    "<b>Behavior-Driven Development (BDD):</b> Un proceso que fomenta la colaboración entre negocio, desarrolladores y QA usando un lenguaje natural (Gherkin: Given-When-Then) para definir el comportamiento del sistema. Herramientas como Cucumber lo implementan."
-                ]
-            }
-        ]
-    },
-    "Resolución de Escenarios": {
-        title: "Resolución de Escenarios",
-        topics: [
-            {
-                title: "Mentalidad de un QA Efectivo",
-                explanation: "Más allá de las técnicas, el valor de un QA reside en su mentalidad crítica, su capacidad de comunicación y su enfoque en la calidad integral.",
-                keyPoints: [
-                    "<b>Comunicación de Riesgos:</b> La tarea principal de un QA no es decir 'sí' o 'no' a un lanzamiento, sino <b>comunicar claramente el riesgo</b> (impacto, probabilidad) para que el negocio tome una decisión informada.",
-                    "<b>Colaboración Proactiva:</b> Ante requisitos ambiguos, un QA no espera. <b>Colabora</b> con el Product Owner y los desarrolladores y usa técnicas como el testing exploratorio para aclarar dudas.",
-                    "<b>Basado en Hechos, no en Opiniones:</b> Cuando hay desacuerdos ('es un bug' vs 'es una feature'), la referencia siempre deben ser los <b>requisitos y criterios de aceptación</b>. El Product Owner tiene la última palabra sobre el comportamiento esperado."
-                ]
-            },
-            {
-                title: "Estrategia y Priorización",
-                explanation: "Los recursos son siempre limitados. Un QA senior sabe cómo aplicar el conocimiento teórico para maximizar el valor de su trabajo.",
-                keyPoints: [
-                    "<b>Retorno de Inversión (ROI) en Automatización:</b> Se deben automatizar primero los casos de prueba <b>repetitivos, estables y de alto riesgo</b> (ej. flujos críticos de negocio). Automatizar algo que se ejecuta una vez no tiene sentido.",
-                    "<b>Combinación de Técnicas:</b> Una buena estrategia de pruebas no usa una sola técnica. Combina <b>partición de equivalencia, valores límite, tablas de decisión, etc.</b>, para obtener la mejor cobertura con el menor número de pruebas.",
-                    "<b>Análisis de Causa Raíz:</b> Cuando los defectos se concentran en un área (agrupación de defectos), un QA proactivo no solo los reporta, sino que propone un <b>análisis para entender por qué ocurren</b> y cómo mejorar el proceso para prevenirlos."
-                ]
-            },
-            {
-                title: "Desafíos Comunes",
-                explanation: "En el día a día, surgen problemas que requieren experiencia y una comprensión profunda de los principios de testing.",
-                keyPoints: [
-                    "<b>Pruebas Inestables (Flaky Tests):</b> Un test de UI que falla intermitentemente suele ser por problemas de <b>sincronización</b>. El script es más rápido que la aplicación. La solución es implementar esperas inteligentes (explicit waits).",
-                    "<b>'Prueben todo':</b> Esta petición es una oportunidad para educar. Se debe explicar que <b>las pruebas exhaustivas son imposibles</b> y proponer un enfoque basado en riesgos para cubrir las áreas más críticas.",
-                    "<b>Estimación de Pruebas:</b> Una buena estimación se basa en múltiples factores: <b>complejidad de los requisitos, riesgo, dependencias</b> con otros sistemas, y la claridad de los criterios de aceptación."
+                    "<b>Pruebas Estáticas:</b> Es cuando actúas como un 'detector de problemas' antes de que existan. Incluye: <b>revisar historias de usuario</b>, analizar diseños (wireframes), y hacer <b>revisiones de código (code reviews)</b> con los desarrolladores.",
+                    "<b>Pruebas Dinámicas:</b> Es la validación del software en ejecución. Incluye todas las pruebas funcionales y no funcionales que realizas interactuando con la aplicación.",
+                    "<b>El Valor Real:</b> Un bug encontrado en una revisión de requisitos cuesta 1€ arreglarlo. El mismo bug encontrado en producción puede costar 1000€ (en tiempo de desarrollo, impacto al cliente, etc.)."
                 ]
             }
         ]
     },
     "Metodologías Ágiles y Scrum": {
-        title: "Metodologías Ágiles y Scrum",
+        title: "El Rol del QA en el Proceso Ágil",
         topics: [
             {
-                title: "Manifiesto Ágil: Valores y Principios",
-                explanation: "El Manifiesto Ágil es la base de frameworks como Scrum. Propone una forma de trabajar centrada en la entrega de valor, la colaboración y la adaptabilidad.",
+                title: "El QA en las Ceremonias Scrum",
+                explanation: "Tu participación activa en las ceremonias no es opcional, es donde más valor puedes aportar para prevenir defectos y asegurar la calidad desde el inicio.",
                 keyPoints: [
-                    "<b>Individuos e interacciones</b> sobre procesos y herramientas.",
-                    "<b>Software funcionando</b> sobre documentación exhaustiva.",
-                    "<b>Colaboración con el cliente</b> sobre negociación contractual.",
-                    "<b>Respuesta ante el cambio</b> sobre seguir un plan."
+                    "<b>En la Sprint Planning:</b> Eres el 'abogado del diablo'. Tu misión es hacer preguntas para que los Criterios de Aceptación (AC) sean claros y testeables. Piensa en casos borde, errores y 'caminos infelices'.",
+                    "<b>En la Daily Scrum:</b> Escucha los bloqueos. Si un desarrollador dice 'estoy atascado con el entorno', es tu oportunidad de ayudar. Sincronízate sobre el estado de las pruebas y qué se necesita para desbloquear el flujo.",
+                    "<b>En la Sprint Review:</b> No es solo una demo del desarrollador. Es donde demuestras cómo la funcionalidad cumple con los criterios de calidad. Prepara tus escenarios de prueba más relevantes para mostrar la robustez del trabajo.",
+                    "<b>En la Sprint Retrospective:</b> Aporta sugerencias constructivas para mejorar el PROCESO. En lugar de 'los desarrolladores entregan tarde', prueba con '¿Podríamos intentar hacer revisiones informales antes de un pase a QA para agilizar el feedback?'."
                 ]
             },
             {
-                title: "El Framework Scrum: Roles",
-                explanation: "Scrum es un marco de trabajo para desarrollar productos complejos. Define tres roles claros con responsabilidades específicas.",
+                title: "Definition of Done (DoD) vs. Criterios de Aceptación (AC)",
+                explanation: "Entender esta diferencia es crucial. Los AC son sobre UNA historia, la DoD es sobre TODO el trabajo.",
                 keyPoints: [
-                    "<b>Product Owner (PO):</b> Maximiza el valor del producto. Es el único responsable de gestionar el <b>Product Backlog</b> (la lista de requisitos).",
-                    "<b>Scrum Master (SM):</b> Es un líder servicial. Ayuda al equipo a entender y aplicar Scrum, y se encarga de <b>eliminar impedimentos</b>.",
-                    "<b>Equipo de Desarrollo (Developers):</b> Un grupo multifuncional de profesionales (incluyendo QAs) que tienen la habilidad de crear el incremento del producto. Son auto-organizados."
+                    "<b>Criterios de Aceptación (AC):</b> Definen QUÉ debe hacer una historia específica para ser considerada funcionalmente completa desde la perspectiva del Product Owner. Son únicos para cada historia.",
+                    "<b>Definition of Done (DoD):</b> Es el estándar de CALIDAD de TODO el equipo. Se aplica a TODAS las historias. Es una checklist que puede incluir: 'Pruebas unitarias pasan', 'Código revisado por un par', 'Pruebas de QA completadas', 'Documentación actualizada', etc.",
+                    "<b>En la práctica:</b> Una historia no está 'Done' hasta que cumple tanto sus AC como la DoD del equipo."
+                ]
+            }
+        ]
+    },
+    "Técnicas de Prueba": {
+        title: "Diseñando Pruebas Efectivas",
+        topics: [
+            {
+                title: "Caja Negra: Las Técnicas Clave para Maximizar Cobertura",
+                explanation: "No puedes probar todo, así que debes ser inteligente. Estas técnicas te ayudan a seleccionar los casos de prueba con mayor probabilidad de encontrar defectos.",
+                keyPoints: [
+                    "<b>Partición de Equivalencia:</b> Agrupa los datos. Si un campo acepta números del 1 al 100, no pruebes todos. Prueba con uno válido (ej. 50), uno por debajo (ej. 0), y uno por encima (ej. 101). Has cubierto 3 grupos con 3 pruebas.",
+                    "<b>Análisis de Valores Límite:</b> La mayoría de los errores ocurren en los bordes. Para el rango 1-100, los valores más importantes son 0, 1, 2 y 99, 100, 101.",
+                    "<b>Tablas de Decisión:</b> Perfectas para reglas de negocio complejas. Ejemplo: un e-commerce con descuentos (Usuario VIP + Compra > 100€ = 15% off). Una tabla te asegura que pruebas todas las combinaciones posibles.",
+                    "<b>Transición de Estados:</b> Ideal para flujos de trabajo. ¿Puede un pedido pasar de 'Entregado' a 'Cancelado'? Esta técnica te ayuda a diseñar pruebas para transiciones válidas e inválidas."
                 ]
             },
             {
-                title: "El Framework Scrum: Eventos y Artefactos",
-                explanation: "Scrum organiza el trabajo en ciclos llamados Sprints, que contienen eventos específicos para la inspección y adaptación. Los artefactos representan el trabajo o el valor.",
+                title: "Testing Exploratorio: El Arte de Descubrir",
+                explanation: "No es 'hacer click sin rumbo'. Es una disciplina de aprendizaje simultáneo, diseño y ejecución de pruebas. Es tu arma más poderosa contra los bugs inesperados.",
                 keyPoints: [
-                    "<b>Eventos:</b> Sprint Planning, Daily Scrum, Sprint Review y Sprint Retrospective.",
-                    "<b>Sprint Retrospective:</b> Su propósito es que el equipo inspeccione su propio proceso y cree un plan de <b>mejoras</b> para el siguiente Sprint.",
-                    "<b>Artefactos:</b> Product Backlog (lista de todo lo necesario para el producto), Sprint Backlog (el plan para un Sprint) y el Incremento (la porción del producto 'terminada').",
-                    "<b>Definition of Done (DoD):</b> Es un acuerdo compartido por todo el equipo que define los criterios de calidad que debe cumplir un trabajo para ser considerado 'terminado'."
+                    "<b>Estructura:</b> Se basa en 'sesiones' con un objetivo claro (ej. 'Sesión de 45 min para explorar la nueva función de exportar a PDF, enfocándome en la seguridad').",
+                    "<b>Libertad y Foco:</b> Te da la libertad de seguir tu intuición, pero el objetivo (charter) te mantiene enfocado.",
+                    "<b>Documentación Ligera:</b> Tomas notas sobre lo que pruebas, los bugs que encuentras y las preguntas que surgen. Es muy diferente a seguir un script de prueba rígido."
+                ]
+            },
+            {
+                title: "Introducción a las Pruebas de Accesibilidad (a11y)",
+                explanation: "Una aplicación no es de alta calidad si una porción de la población no puede usarla. La accesibilidad no es una opción, es una necesidad.",
+                keyPoints: [
+                    "<b>¿Por qué es importante?:</b> Para garantizar que personas con discapacidades (visuales, auditivas, motoras, etc.) puedan usar el producto. Además, en muchos países es un requisito legal.",
+                    "<b>Chequeos Fáciles para Empezar:</b> 1. <b>Navegación por teclado:</b> ¿Puedes usar toda la web solo con la tecla 'Tab'? ¿Ves claramente qué elemento está seleccionado (foco visible)?. 2. <b>Contraste de color:</b> Usa una extensión de navegador para verificar si los textos son legibles. 3. <b>Textos alternativos:</b> ¿Las imágenes tienen descripciones para los lectores de pantalla?",
+                    "<b>Empatía:</b> La accesibilidad se trata de ponerse en el lugar de otros usuarios y construir una experiencia inclusiva para todos."
+                ]
+            }
+        ]
+    },
+    "Gestión de Pruebas": {
+        title: "Gestión de Calidad y Comunicación Estratégica",
+        topics: [
+            {
+                title: "El Arte de Reportar un Bug: Claro, Conciso y Reproducible",
+                explanation: "Un buen reporte de bug es la diferencia entre un bug corregido rápidamente y uno que se queda en el backlog durante meses. Tu objetivo es hacerle la vida fácil al desarrollador.",
+                keyPoints: [
+                    "<b>Título Informativo:</b> MALO: 'El botón no funciona'. BUENO: '[Checkout] El botón \"Confirmar Pago\" se deshabilita tras introducir un cupón inválido'.",
+                    "<b>Pasos para Reproducir (Steps to Reproduce):</b> Numéralos. Sé específico. No asumas nada. Un compañero debería poder seguir los pasos y ver el mismo error.",
+                    "<b>Resultado Esperado vs. Actual:</b> 'Esperado: Debería aparecer un mensaje de error rojo'. 'Actual: No pasa nada, el botón se queda gris'.",
+                    "<b>Evidencia Visual y Logs:</b> Una imagen vale más que mil palabras. Un video (GIF) vale un millón. Adjunta siempre capturas, videos y, si es posible, logs de la consola del navegador o del servidor."
+                ]
+            },
+            {
+                title: "Severidad vs. Prioridad: El Diálogo entre QA y Negocio",
+                explanation: "Estos dos campos son a menudo confundidos, pero son la herramienta clave para la negociación. El QA sugiere la severidad, el PO define la prioridad.",
+                keyPoints: [
+                    "<b>Severidad (Severity):</b> Es el impacto TÉCNICO del bug. ¿Cómo de 'roto' está el sistema? (Crítica, Alta, Media, Baja). Es definida por el QA.",
+                    "<b>Prioridad (Priority):</b> Es la urgencia del NEGOCIO para arreglarlo. ¿Cómo impacta al usuario o a la empresa? (Urgente, Alta, Media, Baja). Es definida por el Product Owner.",
+                    "<b>El Ejemplo Clásico:</b> Un error ortográfico del nombre de la empresa en la home page. <b>Severidad: Baja</b> (técnicamente no rompe nada). <b>Prioridad: Urgente</b> (es una vergüenza para la imagen de la empresa)."
+                ]
+            },
+            {
+                title: "Estrategias de Datos de Prueba (Test Data Management)",
+                explanation: "Los tests inestables a menudo no son un problema del código de la app, sino de los datos de prueba. Una buena estrategia de datos es fundamental para una automatización fiable.",
+                keyPoints: [
+                    "<b>El Problema:</b> Los tests dependen de un estado específico de la base de datos. Si un test modifica o borra un dato que otro test necesita, el segundo fallará.",
+                    "<b>Soluciones:</b> 1. <b>Creación dinámica:</b> El mejor enfoque. Cada test crea los datos que necesita (ej. vía API) antes de ejecutarse y los limpia después. 2. <b>Pool de datos:</b> Tener un conjunto de datos de prueba 'limpios' que se pueden 'reservar' y restaurar. 3. <b>Evita la dependencia:</b> Diseña tests que sean lo más independientes posible unos de otros."
+                ]
+            }
+        ]
+    },
+    "Automatización y Herramientas": {
+        title: "Automatización Inteligente y Herramientas Modernas",
+        topics: [
+            {
+                title: "La Pirámide de Automatización Aplicada y su ROI",
+                explanation: "Este modelo no es un dogma, es una guía económica. Te dice dónde invertir tu esfuerzo de automatización para obtener el máximo beneficio (ROI - Retorno de Inversión).",
+                keyPoints: [
+                    "<b>Base (Tests Unitarios):</b> Son la inversión más rentable. Rápidos, estables y baratos. Aunque los escriben los desarrolladores, como QA debes abogar por una buena cobertura.",
+                    "<b>Medio (Tests de API/Integración):</b> El 'punto dulce' para QA. Prueban la lógica de negocio sin la fragilidad de la UI. Son mucho más rápidos y estables que los tests de UI.",
+                    "<b>Cima (Tests de UI/E2E):</b> Son los más caros de mantener y los más lentos. Automatiza solo los flujos de usuario más críticos y estables. No intentes automatizar todo en la UI."
+                ]
+            },
+            {
+                title: "Fundamentos de Pruebas de API (con Postman)",
+                explanation: "Las APIs son el motor de las aplicaciones modernas. Saber probarlas es una habilidad no negociable para un QA.",
+                keyPoints: [
+                    "<b>HTTP Verbs:</b> GET (leer datos), POST (crear datos), PUT/PATCH (actualizar datos), DELETE (borrar datos).",
+                    "<b>Status Codes:</b> 2xx (Todo bien), 3xx (Redirección), 4xx (Error tuyo, del cliente, ej. 404 No Encontrado, 403 Prohibido), 5xx (Error nuestro, del servidor, ej. 500 Error Interno).",
+                    "<b>Aserciones (Tests):</b> La verdadera potencia de Postman está en su pestaña 'Tests'. Puedes escribir código simple para verificar automáticamente que la respuesta es la correcta (ej. `pm.response.to.have.status(200);`)."
+                ]
+            },
+            {
+                title: "Estrategias Clave en Automatización de UI",
+                explanation: "Para que tu automatización de UI no se convierta en un pantano de tests rotos, necesitas seguir patrones de diseño probados.",
+                keyPoints: [
+                    "<b>Page Object Model (POM):</b> Es la regla de oro. No escribas localizadores de elementos (`#id`, `.clase`) dentro de tus tests. Crea una clase por cada página de tu app que contenga esos localizadores. Si algo cambia en la UI, solo lo actualizas en un sitio.",
+                    "<b>Localizadores Robustos:</b> Elige siempre el localizador más estable. El orden de preferencia es: ID único > Selector CSS específico > XPath. Evita XPaths absolutos, son extremadamente frágiles.",
+                    "<b>Esperas Explícitas (Explicit Waits):</b> La causa #1 de tests inestables ('flaky') es la sincronización. Nunca uses esperas fijas (`sleep(5)`). Usa esperas explícitas: 'espera HASTA que este elemento sea visible/clicleable'."
+                ]
+            },
+            {
+                title: "QA en el Pipeline de CI/CD",
+                explanation: "La Integración y Entrega Continua (CI/CD) es el corazón de DevOps. El rol del QA es asegurar que el pipeline tenga las 'puertas de calidad' adecuadas para dar confianza en cada despliegue.",
+                keyPoints: [
+                    "<b>¿Qué es?:</b> Un proceso automatizado que compila el código, ejecuta las pruebas y despliega la aplicación.",
+                    "<b>Tu Rol:</b> Integrar los diferentes tipos de pruebas en el pipeline. Los tests unitarios se ejecutan en cada cambio. La suite de regresión de API se ejecuta antes de desplegar a un entorno de pruebas. Los tests de UI (más lentos) se pueden ejecutar por la noche.",
+                    "<b>El Objetivo:</b> Feedback rápido. Si un desarrollador sube un cambio que rompe algo, el pipeline debe fallar en minutos y notificarle, no horas o días después."
+                ]
+            }
+        ]
+    },
+    "Resolución de Escenarios": {
+        title: "La Evolución del QA Moderno",
+        topics: [
+            {
+                title: "De Tester a Ingeniero de Calidad: El Cambio de Mentalidad",
+                explanation: "Un 'tester' encuentra bugs. Un 'Ingeniero de Calidad' (QE) previene bugs y mejora el proceso para que no vuelvan a ocurrir. Es un cambio de reactivo a proactivo.",
+                keyPoints: [
+                    "<b>Calidad vs. Testing:</b> Testing es una actividad que haces. Calidad es una propiedad que el producto tiene. Tu trabajo es influir en la segunda, usando la primera como una de tus herramientas.",
+                    "<b>La Calidad es Responsabilidad de Todos:</b> No eres el único dueño de la calidad. Tu rol es ser un coach, un facilitador y el experto que provee las herramientas y datos para que todo el equipo construya un producto de calidad.",
+                    "<b>Análisis de Causa Raíz (RCA):</b> Cuando encuentres un bug crítico, no te detengas en reportarlo. Pregunta '¿Por qué ocurrió esto?'. ¿Faltaban requisitos? ¿No había tests unitarios? ¿El diseño era ambiguo? Usa esta información en la retrospectiva para proponer mejoras reales."
+                ]
+            },
+            {
+                title: "Desarrollando Habilidades en 'T' (T-Shaped Skills)",
+                explanation: "Para ser un QA invaluable, necesitas una especialización profunda (la barra vertical de la 'T') y un conocimiento amplio en otras áreas (la barra horizontal).",
+                keyPoints: [
+                    "<b>La Barra Vertical (Profundidad):</b> Tu dominio del testing. Técnicas, herramientas de automatización, estrategia de pruebas.",
+                    "<b>La Barra Horizontal (Amplitud):</b> Conocer los fundamentos de: <b>Desarrollo</b> (entender el código, leer PRs), <b>DevOps</b> (saber cómo funciona el pipeline CI/CD), <b>UX/UI</b> (entender los principios de un buen diseño), y <b>Negocio</b> (entender por qué los usuarios necesitan el producto).",
+                    "<b>Beneficio:</b> Un QA con habilidades en 'T' puede comunicarse más eficazmente con todo el equipo, identificar riesgos más complejos y aportar soluciones, no solo problemas."
+                ]
+            },
+            {
+                title: "Tipos de Pruebas de Rendimiento y Cuándo Usarlas",
+                explanation: "Las pruebas de rendimiento no son solo 'ver si la app es rápida'. Existen diferentes tipos para responder a diferentes preguntas de negocio.",
+                keyPoints: [
+                    "<b>Pruebas de Carga (Load Testing):</b> ¿El sistema soporta la carga de usuarios esperada? (Ej. 1000 usuarios concurrentes).",
+                    "<b>Pruebas de Estrés (Stress Testing):</b> ¿Cuál es el punto de quiebre del sistema? Se aumenta la carga hasta que la aplicación falla para ver cómo se comporta y se recupera.",
+                    "<b>Pruebas de Pico (Spike Testing):</b> ¿Cómo reacciona el sistema a un aumento súbito y masivo de usuarios? (Ej. el lanzamiento de entradas para un concierto, Black Friday).",
+                    "<b>Pruebas de Resistencia (Soak Testing):</b> ¿El sistema se mantiene estable bajo una carga normal durante un período prolongado? (Ej. 8 horas). Busca fugas de memoria y degradación del rendimiento."
                 ]
             }
         ]
@@ -1338,8 +1268,8 @@ const HomeScreen = ({ user, hasSavedProgress, onNavigateToQuiz, onNavigateToStud
             )}
             <button onClick={onLogout} className="text-sm font-medium text-teal-600 hover:text-teal-500">Cerrar Sesión</button>
         </div>
-        <h1 className="text-4xl font-bold text-slate-900 mb-2">¡Hola, {user.name}!</h1>
-        <p className="text-slate-600 mb-8">Elige tu camino para dominar ISTQB.</p>
+        <h1 className="text-4xl font-bold text-slate-900 mb-2">¡Bienvenido, {user.name}!</h1>
+        <p className="text-slate-600 mb-8">Prepárate para llevar tus habilidades de QA al siguiente nivel.</p>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
             {/* Card for Study Mode */}
@@ -1347,9 +1277,9 @@ const HomeScreen = ({ user, hasSavedProgress, onNavigateToQuiz, onNavigateToStud
                 onClick={onNavigateToStudy}
                 className="group p-6 bg-slate-50 hover:bg-white hover:shadow-lg rounded-xl border border-slate-200 transition-all text-left transform hover:-translate-y-1"
             >
-                <h2 className="text-2xl font-bold text-slate-800">📖 Modo Aprendizaje</h2>
-                <p className="text-slate-600 mt-2">Estudia los conceptos clave de cada módulo del sílabo a tu propio ritmo.</p>
-                <span className="mt-4 inline-block font-semibold text-teal-600 group-hover:underline">Comenzar a estudiar &rarr;</span>
+                <h2 className="text-2xl font-bold text-slate-800">🚀 Evoluciona tu Carrera en QA</h2>
+                <p className="text-slate-600 mt-2">Aprende los fundamentos y las técnicas avanzadas para pasar de Tester a Ingeniero de Calidad.</p>
+                <span className="mt-4 inline-block font-semibold text-teal-600 group-hover:underline">Comenzar a aprender &rarr;</span>
             </button>
             
             {/* Card for Quiz */}
@@ -1360,8 +1290,8 @@ const HomeScreen = ({ user, hasSavedProgress, onNavigateToQuiz, onNavigateToStud
                  {hasSavedProgress && (
                     <span className="absolute top-3 right-3 text-xs font-semibold bg-amber-100 text-amber-800 px-2 py-1 rounded-full">Progreso Guardado</span>
                 )}
-                <h2 className="text-2xl font-bold text-slate-800">🧪 Evaluación</h2>
-                <p className="text-slate-600 mt-2">Pon a prueba tus conocimientos con nuestro examen completo y obtén un plan de mejora.</p>
+                <h2 className="text-2xl font-bold text-slate-800">💡 Diagnostica tus Habilidades</h2>
+                <p className="text-slate-600 mt-2">Realiza una evaluación práctica y descubre tus fortalezas y áreas de oportunidad.</p>
                 <span className="mt-4 inline-block font-semibold text-teal-600 group-hover:underline">Iniciar evaluación &rarr;</span>
             </button>
         </div>
