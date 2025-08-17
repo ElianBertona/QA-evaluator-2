@@ -226,7 +226,19 @@ const QA_QUESTIONS = [
     correctAnswer: "Todo el equipo Scrum (desarrolladores, QA, PO).",
     explanation: "En los marcos ágiles, la calidad es una responsabilidad compartida. Todo el equipo se compromete a entregar un incremento de producto de alta calidad al final de cada sprint."
   },
-  
+  {
+    module: "Metodologías Ágiles y Scrum",
+    question: "Durante una sesión de refinamiento del backlog (grooming), el equipo analiza una historia para un nuevo formulario de registro. ¿Cuál es la contribución MÁS valiosa del QA en esta etapa?",
+    options: [
+      "Estimar el tiempo que tomará probar la historia una vez que esté terminada.",
+      "Preguntar sobre el manejo de casos borde y errores (ej. ¿qué pasa si el usuario ya existe?, ¿qué campos son obligatorios?) para hacer los Criterios de Aceptación más robustos.",
+      "Empezar a escribir los scripts de automatización basados en los requisitos iniciales.",
+      "Esperar a que los desarrolladores definan la estructura de la base de datos para entender cómo probarlo."
+    ],
+    correctAnswer: "Preguntar sobre el manejo de casos borde y errores (ej. ¿qué pasa si el usuario ya existe?, ¿qué campos son obligatorios?) para hacer los Criterios de Aceptación más robustos.",
+    explanation: "La participación del QA en el refinamiento es crucial para anticipar riesgos y casos complejos. Al hacer preguntas sobre los 'caminos infelices' y los bordes, el QA ayuda al equipo a construir una definición de 'hecho' más completa desde el principio."
+  },
+
   // Módulo 3: Técnicas de Prueba
   {
     module: "Técnicas de Prueba",
@@ -285,7 +297,7 @@ const QA_QUESTIONS = [
       "Cuatro: una inválida (muy corta), una válida, una inválida (muy larga) y otra inválida (con caracteres especiales como '@#$').",
       "Solo una: un nombre de usuario válido de 10 caracteres."
     ],
-    correctAnswer: "Cuatro: una inválida (muy corta), una válida, una inválida (muy larga) and otra inválida (con caracteres especiales como '@#$').",
+    correctAnswer: "Cuatro: una inválida (muy corta), una válida, una inválida (muy larga) y otra inválida (con caracteres especiales como '@#$').",
     explanation: "Una buena partición de equivalencia considera todas las reglas. Se necesitan particiones para probar la longitud (demasiado corta, válida, demasiado larga) y la composición de los caracteres (válidos vs. inválidos)."
   },
   {
@@ -335,6 +347,18 @@ const QA_QUESTIONS = [
     ],
     correctAnswer: "Cuando se integra un nuevo componente y se quiere descubrir cómo interactúa con el resto del sistema de forma inesperada.",
     explanation: "El testing exploratorio brilla cuando el objetivo es el aprendizaje y el descubrimiento de bugs no obvios. Es menos estructurado y permite al tester usar su creatividad y experiencia para investigar la aplicación."
+  },
+   {
+    module: "Técnicas de Prueba",
+    question: "Al revisar un nuevo formulario web, ¿cuál de los siguientes hallazgos representa una violación de accesibilidad (a11y) de nivel crítico?",
+    options: [
+      "El color de fondo del botón de 'Enviar' no coincide exactamente con la paleta de colores de la marca.",
+      "La página tarda 3 segundos en cargar en una conexión 3G.",
+      "Al navegar con el teclado, es imposible saber qué elemento está seleccionado porque no hay un indicador de foco visible (outline).",
+      "El texto de la política de privacidad está en un tamaño de fuente de 12px en lugar de los 14px recomendados."
+    ],
+    correctAnswer: "Al navegar con el teclado, es imposible saber qué elemento está seleccionado porque no hay un indicador de foco visible (outline).",
+    explanation: "La accesibilidad web (a11y) garantiza que las personas con discapacidades puedan usar la web. La navegación por teclado es fundamental, y un indicador de foco visible es un requisito no negociable para que los usuarios sepan dónde se encuentran en la página."
   },
 
   // Módulo 4: Gestión de Pruebas -> 10 preguntas
@@ -458,6 +482,30 @@ const QA_QUESTIONS = [
     correctAnswer: "Los logs de la aplicación, la consola del navegador y cualquier detalle del entorno (versión, navegador) capturados en el momento del fallo.",
     explanation: "Para bugs intermitentes, la reproducibilidad es el mayor desafío. Los logs y la información del entorno son pistas vitales para que el desarrollador pueda diagnosticar el problema sin necesidad de verlo ocurrir."
   },
+  {
+    module: "Gestión de Pruebas",
+    question: "Encuentras un bug: el enlace a los 'Términos y Condiciones' en el pie de página está roto (error 404). Técnicamente, su severidad es baja. ¿Cómo comunicas el riesgo al Product Owner de la forma más efectiva?",
+    options: [
+      "Reportas el bug con severidad 'Baja' y esperas a que sea priorizado en el backlog.",
+      "Lo comunicas como: 'Bug de severidad baja, pero con riesgo legal potencial alto para la empresa. Recomiendo una prioridad alta para su corrección'.",
+      "Pides al equipo de desarrollo que lo solucione rápidamente antes de reportarlo formalmente para no generar alarma.",
+      "Creas una tarea para revisar todos los enlaces del sitio, ya que probablemente haya más rotos."
+    ],
+    correctAnswer: "Lo comunicas como: 'Bug de severidad baja, pero con riesgo legal potencial alto para la empresa. Recomiendo una prioridad alta para su corrección'.",
+    explanation: "Un QA eficaz entiende que su rol va más allá de encontrar fallos técnicos. Debe ser capaz de analizar y comunicar el impacto de esos fallos en el negocio, lo que permite una priorización adecuada. Un enlace roto puede tener consecuencias legales o de cumplimiento."
+  },
+  {
+    module: "Gestión de Pruebas",
+    question: "El equipo de QA pasa mucho tiempo creando y limpiando datos de prueba, y a menudo los tests fallan por datos inconsistentes entre ejecuciones. ¿Cuál es la solución MÁS robusta y escalable para este problema?",
+    options: [
+      "Crear un único usuario de prueba 'maestro' con todos los permisos y usarlo para todas las pruebas automatizadas.",
+      "Implementar scripts o un servicio que genere datos de prueba frescos y específicos para cada ejecución de test (o suite) y los limpie después.",
+      "Hacer una copia de la base de datos de producción y sanitizarla para usarla en el entorno de pruebas.",
+      "Asignar a un QA junior la tarea de revisar y resetear manualmente los datos de prueba cada día."
+    ],
+    correctAnswer: "Implementar scripts o un servicio que genere datos de prueba frescos y específicos para cada ejecución de test (o suite) y los limpie después.",
+    explanation: "La gestión de datos de prueba es un pilar de una automatización madura. Generar datos 'bajo demanda' para cada prueba asegura que las ejecuciones sean predecibles y no dependan de un estado preexistente, lo que aumenta drásticamente la fiabilidad de la suite."
+  },
 
   // Módulo 5: Automatización y Herramientas -> 10 preguntas
   {
@@ -580,6 +628,42 @@ const QA_QUESTIONS = [
     correctAnswer: "Colaboras activamente con el Product Owner y los desarrolladores para escribir escenarios en Gherkin (Given-When-Then) que describen el comportamiento esperado, los cuales luego se automatizan.",
     explanation: "BDD es un proceso de colaboración. El QA ayuda a traducir los requisitos de negocio en ejemplos concretos y ejecutables que sirven como documentación viva y como base para las pruebas de aceptación automatizadas."
   },
+  {
+    module: "Automatización y Herramientas",
+    question: "Tienes recursos limitados para automatizar. ¿Cuál de los siguientes casos de prueba es el candidato IDEAL para la automatización, ofreciendo el mejor Retorno de Inversión (ROI)?",
+    options: [
+      "Una nueva funcionalidad compleja que probablemente cambiará varias veces en los próximos sprints.",
+      "Un test End-to-End que cubre un flujo de usuario poco frecuente pero que requiere una configuración manual muy compleja.",
+      "El conjunto de pruebas de regresión para el flujo de login, registro y compra, que se ejecuta en cada despliegue.",
+      "Un test para verificar un cambio de estilo visual en la página de 'Sobre Nosotros'."
+    ],
+    correctAnswer: "El conjunto de pruebas de regresión para el flujo de login, registro y compra, que se ejecuta en cada despliegue.",
+    explanation: "El mejor ROI en automatización se obtiene de pruebas que son: 1) Repetitivas (se ejecutan a menudo), 2) Críticas para el negocio (alto riesgo si fallan), y 3) Relativamente estables. Los flujos core de la aplicación cumplen perfectamente estas condiciones."
+  },
+  {
+    module: "Automatización y Herramientas",
+    question: "Un equipo de frontend (consumidor) y un equipo de backend (proveedor) están desarrollando una nueva funcionalidad en paralelo. ¿Qué estrategia de testing permite al equipo de frontend avanzar con seguridad sin depender de que la API real esté desplegada y funcionando?",
+    options: [
+      "Esperar a que el equipo de backend termine y despliegue la API en un entorno de pruebas para empezar las pruebas de integración.",
+      "Utilizar pruebas de contrato (Contract Testing). El proveedor y consumidor acuerdan un 'contrato' (schema) y ambos prueban contra él de forma independiente.",
+      "El equipo de frontend puede crear sus propios 'mocks' o datos falsos, asumiendo cómo funcionará la API.",
+      "Realizar únicamente pruebas de UI End-to-End una vez que ambos componentes estén integrados."
+    ],
+    correctAnswer: "Utilizar pruebas de contrato (Contract Testing). El proveedor y consumidor acuerdan un 'contrato' (schema) y ambos prueban contra él de forma independiente.",
+    explanation: "Las pruebas de contrato (con herramientas como Pact) son una solución poderosa para equipos que trabajan con microservicios o arquitecturas desacopladas. Permiten verificar la compatibilidad entre servicios de forma rápida y aislada, previniendo fallos de integración."
+  },
+  {
+    module: "Automatización y Herramientas",
+    question: "Estás a cargo de la calidad de un sitio web de marketing que es visualmente muy rico, con mucho CSS personalizado, y se actualiza frecuentemente con nuevas campañas. ¿Qué tipo de prueba automatizada es MÁS eficiente para detectar regresiones visuales no deseadas (ej. un elemento desalineado)?",
+    options: [
+      "Pruebas funcionales con Selenium que verifiquen que todos los botones son clickeables.",
+      "Pruebas de API para asegurar que los datos de las campañas se cargan correctamente.",
+      "Pruebas de regresión visual (Visual Regression Testing) que comparan capturas de pantalla de la versión actual con una versión base aprobada.",
+      "Pedir a un diseñador que revise manualmente el sitio después de cada despliegue."
+    ],
+    correctAnswer: "Pruebas de regresión visual (Visual Regression Testing) que comparan capturas de pantalla de la versión actual con una versión base aprobada.",
+    explanation: "Las herramientas de regresión visual (como Applitools, Percy, o Playwright con su comparador de snapshots) son extremadamente eficaces para sitios donde la estética es crítica. Automatizan el tedioso proceso de '¿se ve todo bien?'."
+  },
 
   // Módulo 6: Resolución de Escenarios
   {
@@ -689,6 +773,30 @@ const QA_QUESTIONS = [
     ],
     correctAnswer: "Una vez que el equipo de desarrollo propone un parche, el QA debe validar la corrección en un entorno de pre-producción y realizar pruebas de regresión enfocadas en seguridad.",
     explanation: "En una crisis, el rol del QA es crucial para validar que la solución de emergencia no solo corrige el problema, sino que no introduce nuevos fallos. La velocidad y la precisión en la validación son clave."
+  },
+  {
+    module: "Resolución de Escenarios",
+    question: "Se acerca el 'Black Friday' y se espera que el tráfico en tu e-commerce se multiplique por 10 durante el día, con picos extremos durante la primera hora de ofertas. ¿Qué tipo de prueba de rendimiento es la MÁS crítica para simular este escenario?",
+    options: [
+      "Pruebas de carga (Load Testing) para verificar cómo se comporta el sistema bajo la carga de usuarios esperada (10x).",
+      "Pruebas de estrés (Stress Testing) para encontrar el punto de quiebre del sistema aumentando la carga progresivamente más allá de lo esperado.",
+      "Pruebas de pico (Spike Testing) para simular incrementos súbitos y masivos de usuarios y observar cómo se recupera el sistema.",
+      "Pruebas de resistencia (Soak Testing) para ver si el sistema se mantiene estable bajo una carga normal durante un período prolongado."
+    ],
+    correctAnswer: "Pruebas de pico (Spike Testing) para simular incrementos súbitos y masivos de usuarios y observar cómo se recupera el sistema.",
+    explanation: "Cada tipo de prueba de rendimiento responde a una pregunta diferente. Para eventos de tráfico súbito y extremo como el Black Friday, el Spike Testing es la técnica más relevante para asegurar que la infraestructura puede manejar la explosión inicial de demanda."
+  },
+  {
+    module: "Resolución de Escenarios",
+    question: "Una funcionalidad en la aplicación móvil funciona perfectamente en la oficina usando WiFi, pero varios usuarios reportan que falla o es extremadamente lenta 'en la calle'. ¿Cuál es la causa más probable que debes investigar?",
+    options: [
+      "Un bug en el código que solo se activa fuera de la red de la oficina.",
+      "La fragmentación de dispositivos Android, donde la app no es compatible con los modelos de teléfono de los usuarios.",
+      "La aplicación no maneja correctamente condiciones de red deficientes, como alta latencia, pérdida de paquetes o cambios entre 4G y 3G.",
+      "Los usuarios no han actualizado la aplicación a la última versión disponible en la tienda."
+    ],
+    correctAnswer: "La aplicación no maneja correctamente condiciones de red deficientes, como alta latencia, pérdida de paquetes o cambios entre 4G y 3G.",
+    explanation: "El testing móvil va más allá de la funcionalidad en un entorno ideal. Es crucial simular condiciones de red del mundo real usando herramientas de 'network throttling' o 'network shaping' para descubrir cómo se comporta la aplicación cuando la conexión no es perfecta."
   }
 ];
 
@@ -1775,9 +1883,9 @@ const App = () => {
   const [allEvaluations, setAllEvaluations] = useState<EvaluationResult[]>(() => {
     const savedEvals = localStorage.getItem('qa-app-evaluations');
     return savedEvals ? JSON.parse(savedEvals) : [
-        {id: 1, userName: "Ana Gomez", userEmail: "ana@test.com", score: 52, total: 63, level: "Senior", date: new Date(Date.now() - 86400000).toLocaleDateString()},
-        {id: 2, userName: "Luis Castro", userEmail: "luis@test.com", score: 37, total: 63, level: "Semi-Senior (Ssr)", date: new Date(Date.now() - 172800000).toLocaleDateString()},
-        {id: 3, userName: "Carla Diaz", userEmail: "carla@test.com", score: 21, total: 63, level: "Junior (Jr)", date: new Date(Date.now() - 259200000).toLocaleDateString()},
+        {id: 1, userName: "Ana Gomez", userEmail: "ana@test.com", score: 52, total: 65, level: "Senior", date: new Date(Date.now() - 86400000).toLocaleDateString()},
+        {id: 2, userName: "Luis Castro", userEmail: "luis@test.com", score: 37, total: 65, level: "Semi-Senior (Ssr)", date: new Date(Date.now() - 172800000).toLocaleDateString()},
+        {id: 3, userName: "Carla Diaz", userEmail: "carla@test.com", score: 21, total: 65, level: "Junior (Jr)", date: new Date(Date.now() - 259200000).toLocaleDateString()},
     ];
   });
   
