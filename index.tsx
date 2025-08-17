@@ -10,468 +10,696 @@ const QA_QUESTIONS = [
   // Módulo 1: Fundamentos de Pruebas (9 preguntas)
   {
     module: "Fundamentos de Pruebas",
-    question: "En el contexto de los 7 principios de pruebas de ISTQB, ¿qué significa 'Las pruebas demuestran la presencia de defectos'?",
-    options: ["Las pruebas pueden demostrar que no hay defectos.", "Una prueba exitosa es aquella que encuentra un defecto.", "Las pruebas pueden mostrar que los defectos están presentes, pero no pueden demostrar que no hay defectos.", "Las pruebas exhaustivas son posibles y recomendadas."],
-    correctAnswer: "Las pruebas pueden mostrar que los defectos están presentes, pero no pueden demostrar que no hay defectos.",
-    explanation: "Este principio fundamental establece que las pruebas solo pueden confirmar la existencia de defectos, pero nunca pueden garantizar su ausencia total, ya que probar todas las combinaciones posibles es inviable."
+    question: "Después de varias semanas ejecutando la misma suite de regresión automatizada, el equipo nota que ya no se encuentran nuevos bugs. ¿Qué principio de testing explica este fenómeno?",
+    options: [
+      "Las pruebas dependen del contexto.",
+      "La paradoja del pesticida.",
+      "Las pruebas demuestran la presencia de defectos.",
+      "Agrupación de defectos (Defect clustering)."
+    ],
+    correctAnswer: "La paradoja del pesticida.",
+    explanation: "La paradoja del pesticida establece que si se repiten los mismos tests una y otra vez, con el tiempo dejarán de encontrar nuevos defectos. Es necesario revisar y actualizar los casos de prueba para cubrir nuevas áreas y posibles fallos."
   },
   {
     module: "Fundamentos de Pruebas",
-    question: "El principio 'Las pruebas dependen del contexto' implica que:",
-    options: ["Todas las aplicaciones deben probarse de la misma manera.", "La forma de probar una tienda en línea es diferente a probar una aplicación médica.", "Las pruebas deben realizarse en un entorno aislado.", "El contexto del defecto no es importante."],
-    correctAnswer: "La forma de probar una tienda en línea es diferente a probar una aplicación médica.",
-    explanation: "No existe una única estrategia de pruebas universal. Las técnicas, niveles de rigor y objetivos varían según el riesgo, la industria y la tecnología del software."
-  },
-   {
-    module: "Fundamentos de Pruebas",
-    question: "El principio 'Agrupación de defectos' (Defect clustering) sugiere que:",
-    options: ["Los defectos se distribuyen uniformemente en todo el software.", "Un pequeño número de módulos suele contener la mayoría de los defectos.", "Todos los defectos deben ser corregidos en grupo.", "Los defectos deben ser reportados por grupos de testers."],
-    correctAnswer: "Un pequeño número de módulos suele contener la mayoría de los defectos.",
-    explanation: "Este principio, similar al de Pareto (80/20), indica que la mayoría de los defectos se concentran en unas pocas áreas críticas del sistema, lo que ayuda a enfocar los esfuerzos de prueba."
+    question: "El equipo está desarrollando una aplicación de e-commerce. ¿Qué enfoque de pruebas sería más apropiado y por qué, según el principio 'Las pruebas dependen del contexto'?",
+    options: [
+      "Probar la aplicación de la misma forma que un sistema de control aéreo, con un 100% de cobertura de código.",
+      "Enfocarse principalmente en pruebas de rendimiento y seguridad, ya que son las más críticas para cualquier aplicación web.",
+      "Priorizar las pruebas en los flujos de compra, la integración con pasarelas de pago y la compatibilidad en navegadores móviles.",
+      "Aplicar únicamente pruebas unitarias, ya que son las más rápidas y baratas de ejecutar."
+    ],
+    correctAnswer: "Priorizar las pruebas en los flujos de compra, la integración con pasarelas de pago y la compatibilidad en navegadores móviles.",
+    explanation: "El contexto de una tienda online implica riesgos financieros y de reputación si el flujo de compra falla. Por ello, se deben priorizar las áreas que impactan directamente al usuario y al negocio."
   },
   {
     module: "Fundamentos de Pruebas",
-    question: "La falacia de la 'ausencia de errores' significa que:",
-    options: ["Si no se encuentran errores, el software es perfecto.", "Encontrar y corregir errores no ayudará si el sistema construido es inutilizable o no cumple las necesidades del usuario.", "Los errores nunca están realmente ausentes, solo ocultos.", "Es una falacia pensar que se pueden encontrar todos los errores."],
-    correctAnswer: "Encontrar y corregir errores no ayudará si el sistema construido es inutilizable o no cumple las necesidades del usuario.",
-    explanation: "La calidad no se limita a la ausencia de bugs. Un software sin errores pero que no satisface las expectativas del usuario es, en última instancia, un fracaso."
+    question: "En producción, el 80% de los errores reportados por los usuarios se concentran en el módulo de 'Gestión de Perfil'. ¿Qué principio de testing sugiere que este es un comportamiento esperado?",
+    options: [
+      "La falacia de la ausencia de errores.",
+      "Las pruebas exhaustivas son imposibles.",
+      "Agrupación de defectos (Defect clustering).",
+      "Las pruebas tempranas ahorran tiempo y dinero."
+    ],
+    correctAnswer: "Agrupación de defectos (Defect clustering).",
+    explanation: "Este principio, similar al de Pareto, sugiere que la mayoría de los defectos tienden a concentrarse en un pequeño número de módulos, lo que ayuda a enfocar los esfuerzos de pruebas de regresión en las áreas más problemáticas."
   },
   {
     module: "Fundamentos de Pruebas",
-    question: "¿Cuál de las siguientes afirmaciones sobre las pruebas estáticas es VERDADERA?",
-    options: ["Requieren la ejecución del código.", "Solo pueden ser realizadas por herramientas automatizadas.", "Pueden encontrar defectos en una etapa temprana del ciclo de vida.", "Un ejemplo es la prueba de rendimiento."],
-    correctAnswer: "Pueden encontrar defectos en una etapa temprana del ciclo de vida.",
-    explanation: "Las pruebas estáticas (revisiones de código, análisis de requisitos) no ejecutan el software, permitiendo encontrar defectos de forma temprana y económica, antes de que se propaguen."
-  },
-    {
-    module: "Fundamentos de Pruebas",
-    question: "¿Cuál de los 7 principios de ISTQB se relaciona con el concepto de 'retorno de la inversión' en las pruebas?",
-    options: ["Las pruebas exhaustivas son imposibles.", "Las pruebas tempranas ahorran tiempo y dinero.", "La paradoja del pesticida.", "Las pruebas dependen del contexto."],
-    correctAnswer: "Las pruebas tempranas ahorran tiempo y dinero.",
-    explanation: "Encontrar y corregir un defecto en etapas tempranas (requisitos, diseño) es exponencialmente más barato que encontrarlo y corregirlo en producción."
+    question: "Un Product Manager te pide que 'pruebes todo' para garantizar un lanzamiento sin ningún bug. ¿Cómo respondes basándote en los principios fundamentales del testing?",
+    options: [
+      "Aceptas el reto y pides más tiempo para poder ejecutar todos los casos de prueba posibles.",
+      "Le explicas que las pruebas exhaustivas son imposibles y propones un enfoque basado en riesgos para priorizar las áreas más críticas.",
+      "Le aseguras que si la suite de automatización pasa al 100%, el sistema estará libre de errores.",
+      "Le dices que es imposible garantizar la ausencia de bugs y que el equipo de desarrollo es el responsable final."
+    ],
+    correctAnswer: "Le explicas que las pruebas exhaustivas son imposibles y propones un enfoque basado en riesgos para priorizar las áreas más críticas.",
+    explanation: "Educar a los stakeholders es clave. Las pruebas exhaustivas son inviables, por lo que un enfoque profesional se centra en mitigar los riesgos más importantes con los recursos y el tiempo disponibles."
   },
   {
     module: "Fundamentos de Pruebas",
-    question: "La 'paradoja del pesticida' en pruebas de software sugiere que:",
-    options: ["El software se vuelve inmune a los virus si se prueba lo suficiente.", "Si se repiten los mismos casos de prueba una y otra vez, dejarán de encontrar nuevos defectos.", "Usar demasiadas herramientas de prueba puede ser perjudicial.", "Los defectos deben eliminarse como si fueran plagas."],
-    correctAnswer: "Si se repiten los mismos casos de prueba una y otra vez, dejarán de encontrar nuevos defectos.",
-    explanation: "Al igual que los insectos se vuelven resistentes a un pesticida, los casos de prueba pierden su efectividad con el tiempo. Es necesario revisarlos y actualizarlos regularmente para descubrir nuevos tipos de errores."
+    question: "Durante la revisión de una historia de usuario, el QA nota una ambigüedad en un criterio de aceptación. ¿Cuál es la acción más efectiva en este momento?",
+    options: [
+      "Esperar a que la funcionalidad esté desarrollada y luego probar los diferentes posibles resultados.",
+      "Anotar la duda para preguntarla en la siguiente reunión de retrospectiva.",
+      "Plantear la ambigüedad inmediatamente al Product Owner para que la aclare antes de que comience el desarrollo.",
+      "Crear casos de prueba para todas las interpretaciones posibles de la ambigüedad."
+    ],
+    correctAnswer: "Plantear la ambigüedad inmediatamente al Product Owner para que la aclare antes de que comience el desarrollo.",
+    explanation: "Esto es una aplicación del principio de 'Pruebas tempranas' (Shift-Left). Encontrar y corregir un defecto en la fase de requisitos es exponencialmente más barato que hacerlo en una fase posterior."
   },
   {
     module: "Fundamentos de Pruebas",
-    question: "¿Qué es el Proceso de Pruebas Fundamental?",
-    options: ["Un framework exclusivo para metodologías ágiles.", "Un conjunto de actividades que incluye Planificación, Análisis, Diseño, Implementación, Ejecución y Finalización.", "Una herramienta para automatizar el reporte de defectos.", "Un sinónimo de ciclo de vida de desarrollo de software."],
-    correctAnswer: "Un conjunto de actividades que incluye Planificación, Análisis, Diseño, Implementación, Ejecución y Finalización.",
-    explanation: "Este proceso define las etapas clave en cualquier actividad de prueba formal, desde la concepción estratégica hasta el cierre y aprendizaje del ciclo."
+    question: "El equipo ha lanzado una nueva funcionalidad que ha pasado todas las pruebas y no tiene bugs conocidos. Sin embargo, los usuarios se quejan de que es confusa y difícil de usar. ¿Qué principio de testing describe esta situación?",
+    options: [
+      "Las pruebas demuestran la presencia de defectos.",
+      "Las pruebas dependen del contexto.",
+      "La paradoja del pesticida.",
+      "La falacia de la ausencia de errores."
+    ],
+    correctAnswer: "La falacia de la ausencia de errores.",
+    explanation: "Este principio advierte que un software técnicamente libre de errores no tiene valor si no cumple con las necesidades y expectativas del usuario. La calidad va más allá de la simple ausencia de bugs."
   },
   {
     module: "Fundamentos de Pruebas",
-    question: "En la psicología de las pruebas, ¿por qué es importante mantener una mentalidad constructiva y no culpar a los desarrolladores?",
-    options: ["Porque los desarrolladores nunca cometen errores.", "Para mantener una buena relación de trabajo y una comunicación efectiva, enfocándose en la calidad del producto.", "Porque el tester es el único responsable de la calidad.", "No es importante, el objetivo es encontrar culpables."],
-    correctAnswer: "Para mantener una buena relación de trabajo y una comunicación efectiva, enfocándose en la calidad del producto.",
-    explanation: "La calidad es una responsabilidad compartida. Una comunicación colaborativa y sin culpas entre testers y desarrolladores es esencial para un ciclo de desarrollo saludable y eficiente."
+    question: "Eres el único QA en un proyecto. ¿Cuál de las siguientes actividades NO se considera una 'prueba estática'?",
+    options: [
+      "Revisar el documento de requisitos para asegurar que sean claros y comprobables.",
+      "Participar en una sesión de 'walkthrough' del diseño de la nueva arquitectura.",
+      "Ejecutar una consulta SQL para verificar que un dato se guardó correctamente en la base de datos tras un registro.",
+      "Analizar un 'wireframe' de la nueva interfaz de usuario para identificar posibles problemas de usabilidad."
+    ],
+    correctAnswer: "Ejecutar una consulta SQL para verificar que un dato se guardó correctamente en la base de datos tras un registro.",
+    explanation: "Las pruebas estáticas se realizan sin ejecutar el código del sistema (revisión de documentos, análisis de código). Ejecutar una consulta para verificar un resultado es una prueba dinámica, ya que implica interactuar con el sistema en ejecución."
+  },
+  {
+    module: "Fundamentos de Pruebas",
+    question: "Un desarrollador corrige un bug y te pide que lo verifiques. Realizas la prueba y confirmas que el bug está solucionado. ¿Cuál es el siguiente paso MÁS importante?",
+    options: [
+      "Cerrar el ticket del bug inmediatamente.",
+      "Ejecutar una suite de pruebas de regresión en el área afectada para asegurar que la corrección no rompió otra cosa.",
+      "Agradecer al desarrollador y esperar la siguiente tarea.",
+      "Probar la corrección en diferentes navegadores, aunque el bug original solo ocurría en uno."
+    ],
+    correctAnswer: "Ejecutar una suite de pruebas de regresión en el área afectada para asegurar que la corrección no rompió otra cosa.",
+    explanation: "Después de una prueba de confirmación (verificar la corrección), siempre se debe realizar una prueba de regresión. Es muy común que las correcciones introduzcan efectos secundarios inesperados en funcionalidades existentes."
+  },
+  {
+    module: "Fundamentos de Pruebas",
+    question: "Se te asigna probar un nuevo módulo de reportería financiera. ¿Cuál de las siguientes actividades representa una prueba NO funcional?",
+    options: [
+      "Verificar que el reporte se puede exportar a PDF correctamente.",
+      "Comprobar que los cálculos de impuestos en el reporte son correctos.",
+      "Validar que solo los usuarios con el rol 'Contador' pueden acceder al módulo.",
+      "Medir cuánto tiempo tarda el sistema en generar un reporte con un millón de registros."
+    ],
+    correctAnswer: "Medir cuánto tiempo tarda el sistema en generar un reporte con un millón de registros.",
+    explanation: "Las pruebas funcionales verifican 'qué' hace el sistema (cálculos, permisos, exportación). Las pruebas no funcionales verifican 'cómo' lo hace (rendimiento, seguridad, usabilidad)."
   },
   
-  // Módulo 2: Pruebas en el Ciclo de Vida (9 preguntas)
+  // Módulo 2: Pruebas en el Ciclo de Vida -> reframed a El Rol del QA en el Proceso Ágil
   {
-    module: "Pruebas en el Ciclo de Vida",
-    question: "¿Cuál es el propósito principal de las pruebas de regresión?",
-    options: ["Probar las nuevas características de una aplicación.", "Asegurar que los nuevos cambios de código no hayan afectado negativamente las características existentes.", "Probar el rendimiento de una aplicación bajo carga.", "Encontrar tantos errores como sea posible en un nuevo módulo."],
-    correctAnswer: "Asegurar que los nuevos cambios de código no hayan afectado negativamente las características existentes.",
-    explanation: "Las pruebas de regresión son una red de seguridad. Su objetivo es verificar que las modificaciones o correcciones no han introducido nuevos defectos en funcionalidades que antes operaban correctamente."
-  },
-  {
-    module: "Pruebas en el Ciclo de Vida",
-    question: "En el Modelo V, las pruebas de aceptación están directamente relacionadas con:",
-    options: ["El diseño de la arquitectura.", "La codificación de los componentes.", "La fase de análisis de requisitos.", "El diseño detallado."],
-    correctAnswer: "La fase de análisis de requisitos.",
-    explanation: "El Modelo V establece una correspondencia directa entre cada fase de desarrollo y su fase de prueba. Las pruebas de aceptación validan los requisitos del negocio definidos al inicio del proyecto."
+    module: "Metodologías Ágiles y Scrum",
+    question: "Durante la Sprint Planning, el Product Owner presenta una historia de usuario con criterios de aceptación vagos. Como QA del equipo, ¿cuál es tu contribución más valiosa?",
+    options: [
+        "Aceptar la historia y planificar tiempo extra para 'testing exploratorio' y así descubrir los requisitos.",
+        "Hacer preguntas específicas para aclarar los criterios (ej. '¿Qué mensaje de error debe ver el usuario?') para que sean medibles y comprobables.",
+        "Permanecer en silencio, ya que la Planning es una reunión para que los desarrolladores estimen el esfuerzo.",
+        "Sugerir que la historia se mueva al siguiente Sprint para dar más tiempo a que los requisitos se definan mejor."
+    ],
+    correctAnswer: "Hacer preguntas específicas para aclarar los criterios (ej. '¿Qué mensaje de error debe ver el usuario?') para que sean medibles y comprobables.",
+    explanation: "El rol del QA en la Planning es ayudar a refinar las historias y asegurar que los criterios de aceptación sean claros, concisos y, sobre todo, testeables. Esto previene ambigüedades y retrabajo."
   },
   {
-    module: "Pruebas en el Ciclo de Vida",
-    question: "¿Cuál de estos NO es un nivel de prueba?",
-    options: ["Pruebas de Componente", "Pruebas de Integración", "Pruebas de Sistema", "Pruebas de Defectos"],
-    correctAnswer: "Pruebas de Defectos",
-    explanation: "'Pruebas de Defectos' no es un nivel de prueba estándar. Los niveles de prueba son fases que validan diferentes alcances: componente (unidad), integración, sistema y aceptación."
+    module: "Metodologías Ágiles y Scrum",
+    question: "El equipo de desarrollo acaba de entregar una nueva build al entorno de pruebas. ¿Qué tipo de prueba es la más crucial para ejecutar INMEDIATAMENTE para decidir si la build es estable?",
+    options: [
+      "Una suite completa de pruebas de regresión automatizadas.",
+      "Pruebas de usabilidad con usuarios finales.",
+      "Una prueba de humo (Smoke Test) que verifique las funcionalidades críticas.",
+      "Pruebas de rendimiento para ver cómo se comporta bajo carga."
+    ],
+    correctAnswer: "Una prueba de humo (Smoke Test) que verifique las funcionalidades críticas.",
+    explanation: "Un Smoke Test es un conjunto rápido de pruebas que valida que las funcionalidades más importantes (login, búsqueda principal, etc.) no están rotas. Si este test falla, la build se rechaza, ahorrando tiempo al equipo."
   },
   {
-    module: "Pruebas en el Ciclo de Vida",
-    question: "¿Qué tipo de prueba verifica el rendimiento del sistema bajo una carga de trabajo específica y esperada?",
-    options: ["Pruebas de Estrés", "Pruebas de Carga", "Pruebas de Usabilidad", "Pruebas de Compatibilidad"],
-    correctAnswer: "Pruebas de Carga",
-    explanation: "Las pruebas de carga miden el comportamiento del sistema con un número esperado de usuarios, mientras que las pruebas de estrés buscan el punto de ruptura del sistema llevándolo más allá de sus límites normales."
+    module: "Metodologías Ágiles y Scrum",
+    question: "¿Cuál es la diferencia fundamental entre la 'Definition of Done' (DoD) y los 'Criterios de Aceptación' de una historia?",
+    options: [
+      "No hay diferencia, son dos nombres para lo mismo.",
+      "La DoD es definida por el Product Owner y los Criterios de Aceptación por el equipo.",
+      "La DoD se aplica a todas las historias del Sprint (es un estándar de calidad), mientras que los Criterios de Aceptación son únicos para cada historia.",
+      "Los Criterios de Aceptación son técnicos y la DoD es funcional."
+    ],
+    correctAnswer: "La DoD se aplica a todas las historias del Sprint (es un estándar de calidad), mientras que los Criterios de Aceptación son únicos para cada historia.",
+    explanation: "La DoD es una checklist de calidad global (ej: 'código revisado', 'pruebas unitarias pasan', 'documentación actualizada'). Los Criterios de Aceptación definen los requisitos específicos de una funcionalidad particular."
   },
   {
-    module: "Pruebas en el Ciclo de Vida",
-    question: "¿Cuál es un objetivo principal de las Pruebas de Aceptación del Usuario (UAT)?",
-    options: ["Encontrar defectos de código a bajo nivel.", "Verificar que el sistema cumple con los requisitos del negocio y las necesidades del usuario.", "Probar la integración entre diferentes módulos.", "Medir el rendimiento del sistema."],
-    correctAnswer: "Verificar que el sistema cumple con los requisitos del negocio y las necesidades del usuario.",
-    explanation: "UAT es la fase final de pruebas, donde los usuarios finales o clientes validan que el software resuelve su problema o necesidad en un entorno lo más parecido posible al de producción."
+    module: "Metodologías Ágiles y Scrum",
+    question: "En la Daily Scrum, un desarrollador menciona que está bloqueado con una tarea. ¿Cuál es el rol del QA en esta situación?",
+    options: [
+      "Ofrecer ayuda si el bloqueo está relacionado con el entorno de pruebas o la reproducibilidad de un bug.",
+      "Tomar nota del bloqueo para reportarlo al final del Sprint.",
+      "No intervenir, ya que la Daily es solo para que los desarrolladores se sincronicen.",
+      "Sugerir una solución técnica al desarrollador."
+    ],
+    correctAnswer: "Ofrecer ayuda si el bloqueo está relacionado con el entorno de pruebas o la reproducibilidad de un bug.",
+    explanation: "En un equipo ágil, la calidad es responsabilidad de todos. El QA es un miembro del equipo de desarrollo y debe colaborar activamente para resolver impedimentos, especialmente si están relacionados con el testing."
   },
   {
-    module: "Pruebas en el Ciclo de Vida",
-    question: "¿Cuál de las siguientes es una prueba NO funcional?",
-    options: ["Probar que un usuario puede iniciar sesión con credenciales válidas.", "Probar que el sistema puede manejar 1000 usuarios concurrentes.", "Probar que un formulario de registro guarda la información correctamente.", "Probar que un cálculo matemático produce el resultado correcto."],
-    correctAnswer: "Probar que el sistema puede manejar 1000 usuarios concurrentes.",
-    explanation: "Las pruebas funcionales verifican 'qué' hace el sistema (iniciar sesión, guardar datos), mientras que las no funcionales verifican 'cómo' lo hace (rendimiento, seguridad, usabilidad)."
+    module: "Metodologías Ágiles y Scrum",
+    question: "El equipo está en la Sprint Retrospective. ¿Cuál de los siguientes puntos es el más constructivo que un QA puede aportar?",
+    options: [
+      "Quejarse de que los desarrolladores siempre entregan el trabajo el último día del Sprint.",
+      "Sugerir: 'Propongo que intentemos hacer un 'desk check' (revisión rápida) de las historias con el desarrollador antes de que se desplieguen a QA, para reducir el retrabajo'.",
+      "Listar todos los bugs que se encontraron en el Sprint para demostrar el valor del trabajo de QA.",
+      "Preguntar por qué no se completaron todas las historias planificadas."
+    ],
+    correctAnswer: "Sugerir: 'Propongo que intentemos hacer un 'desk check' (revisión rápida) de las historias con el desarrollador antes de que se desplieguen a QA, para reducir el retrabajo'.",
+    explanation: "La Retrospectiva se centra en mejorar el proceso. Una buena contribución identifica un problema (retrabajo) y propone una solución concreta y colaborativa, en lugar de buscar culpables."
   },
   {
-    module: "Pruebas en el Ciclo de Vida",
-    question: "¿Qué es el 'Shift-Left Testing'?",
-    options: ["Dejar todas las pruebas para el final del ciclo de desarrollo.", "Probar solo la interfaz de usuario.", "Comenzar las actividades de prueba lo antes posible en el ciclo de vida del desarrollo.", "Mover los defectos encontrados a la izquierda en un tablero Kanban."],
-    correctAnswer: "Comenzar las actividades de prueba lo antes posible en el ciclo de vida del desarrollo.",
-    explanation: "El 'Shift-Left' es una filosofía que promueve la participación de QA en etapas tempranas (requisitos, diseño) para prevenir defectos en lugar de solo detectarlos, ahorrando costos significativamente."
+    module: "Metodologías Ágiles y Scrum",
+    question: "El concepto 'Shift-Left Testing' en un contexto ágil se refiere a:",
+    options: [
+      "Dejar todas las pruebas para el final del ciclo, justo antes del lanzamiento.",
+      "Mover las tareas de 'Testing' a la columna izquierda del tablero Kanban.",
+      "Involucrar las actividades de calidad lo más temprano posible en el ciclo de vida, como en la revisión de requisitos y diseño.",
+      "Probar únicamente el back-end antes que el front-end."
+    ],
+    correctAnswer: "Involucrar las actividades de calidad lo más temprano posible en el ciclo de vida, como en la revisión de requisitos y diseño.",
+    explanation: "Shift-Left es una filosofía que busca prevenir defectos en lugar de solo detectarlos. Implica que el QA colabore desde la concepción de una idea, no solo cuando el código ya está escrito."
   },
   {
-    module: "Pruebas en el Ciclo de Vida",
-    question: "Verificar que el software funciona correctamente en diferentes navegadores (Chrome, Firefox, Safari) es un ejemplo de:",
-    options: ["Pruebas de Carga", "Pruebas de Usabilidad", "Pruebas de Compatibilidad", "Pruebas de Integración"],
-    correctAnswer: "Pruebas de Compatibilidad",
-    explanation: "Las pruebas de compatibilidad aseguran que el producto ofrece una experiencia consistente y funcional a través de diversas configuraciones de hardware, software, sistemas operativos y redes."
+    module: "Metodologías Ágiles y Scrum",
+    question: "Durante el Sprint Review, un stakeholder importante señala que una funcionalidad no es lo que esperaba. ¿De quién es la principal responsabilidad de que esto haya ocurrido?",
+    options: [
+      "Del QA, por no haber detectado la discrepancia durante las pruebas.",
+      "Del desarrollador, por no haber implementado los requisitos correctamente.",
+      "Del Scrum Master, por no haber facilitado bien la comunicación.",
+      "Del Product Owner, por no haber gestionado adecuadamente las expectativas del stakeholder y los requisitos en el Product Backlog."
+    ],
+    correctAnswer: "Del Product Owner, por no haber gestionado adecuadamente las expectativas del stakeholder y los requisitos en el Product Backlog.",
+    explanation: "El Product Owner es el puente entre los stakeholders y el equipo de desarrollo. Su principal responsabilidad es asegurar que el Product Backlog refleje las necesidades del negocio y que estas sean entendidas por el equipo."
   },
   {
-    module: "Pruebas en el Ciclo de Vida",
-    question: "¿Qué son las pruebas de humo (Smoke Testing)?",
-    options: ["Una prueba exhaustiva de toda la aplicación.", "Un conjunto de pruebas rápidas que verifican la funcionalidad básica y crítica de una nueva compilación para decidir si es estable para pruebas más profundas.", "Pruebas realizadas por los usuarios finales.", "Pruebas para encontrar fallos de seguridad."],
-    correctAnswer: "Un conjunto de pruebas rápidas que verifican la funcionalidad básica y crítica de una nueva compilación para decidir si es estable para pruebas más profundas.",
-    explanation: "Un 'smoke test' actúa como un filtro inicial. Si falla, la nueva versión (build) se rechaza inmediatamente, ahorrando tiempo al equipo de QA al no probar un sistema fundamentalmente roto."
-  },
-
-  // Módulo 3: Técnicas de Prueba (9 preguntas)
-  {
-    module: "Técnicas de Prueba",
-    question: "¿Cuál de las siguientes es una técnica de prueba de 'caja blanca'?",
-    options: ["Partición de equivalencia", "Análisis de valores límite", "Tabla de decisión", "Cobertura de sentencias"],
-    correctAnswer: "Cobertura de sentencias",
-    explanation: "Las técnicas de caja blanca se basan en el conocimiento de la estructura interna del código. La cobertura de sentencias mide cuántas líneas de código se ejecutan durante la prueba."
+    module: "Metodologías Ágiles y Scrum",
+    question: "Un QA está trabajando en un equipo Kanban. ¿Cuál es su principal objetivo diario?",
+    options: [
+      "Completar todas las pruebas asignadas antes de que termine el Sprint.",
+      "Ayudar a que las tareas fluyan a través del tablero, colaborando con desarrolladores para resolver bugs y validar historias en la columna 'Testing'.",
+      "Esperar a que se acumulen varias tareas en la columna de 'Testing' para probarlas en lote.",
+      "Automatizar todos los casos de prueba antes de probar manualmente."
+    ],
+    correctAnswer: "Ayudar a que las tareas fluyan a través del tablero, colaborando con desarrolladores para resolver bugs y validar historias en la columna 'Testing'.",
+    explanation: "En Kanban, el objetivo es optimizar el flujo de trabajo y reducir el 'Work in Progress' (WIP). El QA juega un rol crucial en desbloquear tareas de la fase de testing para que puedan pasar a 'Done'."
   },
   {
-    module: "Técnicas de Prueba",
-    question: "Si un campo de texto acepta números enteros del 1 al 100, ¿qué valores probarías usando 'Análisis de Valores Límite'?",
-    options: ["1, 50, 100", "0, 1, 2, 99, 100, 101", "Solo números negativos", "Cualquier número al azar"],
-    correctAnswer: "0, 1, 2, 99, 100, 101",
-    explanation: "Esta técnica prueba los valores justo en los límites, así como inmediatamente por debajo y por encima de ellos, ya que es donde suelen ocurrir los errores (ej. 0 y 101 son inválidos, 1 y 100 son válidos)."
-  },
-    {
-    module: "Técnicas de Prueba",
-    question: "La técnica de 'Partición de Equivalencia' pertenece a qué categoría de pruebas?",
-    options: ["Caja Blanca", "Caja Negra", "Basadas en la Experiencia", "Estáticas"],
-    correctAnswer: "Caja Negra",
-    explanation: "Las técnicas de caja negra se enfocan en probar la funcionalidad sin conocer el código interno. La partición de equivalencia divide las entradas en grupos de los que se asume que el sistema se comportará de manera similar."
-  },
-  {
-    module: "Técnicas de Prueba",
-    question: "¿Qué es el 'testing exploratorio'?",
-    options: ["Ejecutar scripts de prueba automatizados.", "Seguir estrictamente casos de prueba predefinidos.", "Aprendizaje, diseño y ejecución de pruebas de forma simultánea.", "Revisar el código fuente en busca de errores."],
-    correctAnswer: "Aprendizaje, diseño y ejecución de pruebas de forma simultánea.",
-    explanation: "El testing exploratorio es una técnica dinámica y creativa donde la planificación, ejecución y aprendizaje ocurren al mismo tiempo. Es muy eficaz para encontrar defectos que los casos de prueba formales podrían pasar por alto."
-  },
-  {
-    module: "Técnicas de Prueba",
-    question: "La 'Cobertura de Decisión' es una métrica de prueba de:",
-    options: ["Caja Negra", "Caja Blanca", "Usabilidad", "Rendimiento"],
-    correctAnswer: "Caja Blanca",
-    explanation: "La cobertura de decisión es una técnica de caja blanca más fuerte que la de sentencias. Mide si se han probado todos los resultados posibles de las decisiones en el código (ej. las ramas 'true' y 'false' de un 'if')."
-  },
-  {
-    module: "Técnicas de Prueba",
-    question: "La 'Técnica de Transición de Estados' es más adecuada para probar:",
-    options: ["Sistemas con un gran volumen de datos.", "Sistemas que pueden estar en un número finito de estados y las transiciones entre ellos.", "Algoritmos matemáticos complejos.", "Interfaces de usuario estáticas."],
-    correctAnswer: "Sistemas que pueden estar en un número finito de estados y las transiciones entre ellos.",
-    explanation: "Es ideal para sistemas como una máquina expendedora, un semáforo o el flujo de estados de un pedido en un e-commerce, donde un evento provoca un cambio de un estado a otro."
-  },
-  {
-    module: "Técnicas de Prueba",
-    question: "Las pruebas de 'Caja Gris' combinan elementos de:",
-    options: ["Pruebas de usabilidad y rendimiento.", "Pruebas estáticas y dinámicas.", "Pruebas de caja negra y caja blanca.", "Pruebas manuales y automatizadas."],
-    correctAnswer: "Pruebas de caja negra y caja blanca.",
-    explanation: "En las pruebas de caja gris, el tester tiene un conocimiento parcial del sistema interno, como acceder a la base de datos para verificar los resultados, pero no necesariamente ve el código fuente completo."
-  },
-   {
-    module: "Técnicas de Prueba",
-    question: "¿Qué es el 'Error Guessing' (Adivinación de errores)?",
-    options: ["Una técnica formal de diseño de pruebas de caja negra.", "Una técnica basada en la experiencia donde el tester anticipa errores basándose en su conocimiento.", "Un método para adivinar las contraseñas de los usuarios.", "Un sinónimo de pruebas aleatorias."],
-    correctAnswer: "Una técnica basada en la experiencia donde el tester anticipa errores basándose en su conocimiento.",
-    explanation: "Esta técnica informal depende de la intuición y experiencia del QA para predecir dónde podrían haber cometido errores los desarrolladores, por ejemplo, probando la división por cero o la carga de archivos muy grandes."
-  },
-  {
-    module: "Técnicas de Prueba",
-    question: "Para un sistema de inicio de sesión con múltiples condiciones (usuario válido, contraseña correcta, cuenta no bloqueada), ¿qué técnica de caja negra sería la más eficiente para diseñar pruebas?",
-    options: ["Análisis de valores límite", "Tablas de Decisión", "Transición de estados", "Partición de equivalencia"],
-    correctAnswer: "Tablas de Decisión",
-    explanation: "Las Tablas de Decisión son perfectas para modelar y probar reglas de negocio complejas con múltiples combinaciones de condiciones de entrada y sus correspondientes acciones o resultados."
-  },
-
-  // Módulo 4: Gestión de Pruebas (9 preguntas)
-  {
-    module: "Gestión de Pruebas",
-    question: "¿Qué documento describe el alcance, enfoque, recursos y cronograma de las actividades de prueba?",
-    options: ["Caso de Prueba", "Plan de Pruebas", "Informe de Defectos", "Estrategia de Pruebas"],
-    correctAnswer: "Plan de Pruebas",
-    explanation: "El Plan de Pruebas es el documento central para la gestión de un proyecto de pruebas. Responde a las preguntas: qué, cómo, cuándo y quién va a probar."
-  },
-  {
-    module: "Gestión de Pruebas",
-    question: "En metodologías ágiles como Scrum, ¿quién es el responsable de la calidad del producto?",
-    options: ["Solo el equipo de QA", "Solo el Product Owner", "Todo el equipo (desarrolladores, QA, PO, etc.)", "Solo el Scrum Master"],
-    correctAnswer: "Todo el equipo (desarrolladores, QA, PO, etc.)",
-    explanation: "En Scrum, la calidad es una responsabilidad colectiva. Todo el equipo se compromete a entregar un incremento de producto funcional y de alta calidad al final de cada sprint."
-  },
-  {
-    module: "Gestión de Pruebas",
-    question: "Un defecto encontrado por el cliente final que no fue detectado por el equipo de pruebas se conoce como:",
-    options: ["Defecto bloqueante", "Defecto latente", "Fuga de defectos (Defect leakage)", "Error de usabilidad"],
-    correctAnswer: "Fuga de defectos (Defect leakage)",
-    explanation: "La 'fuga de defectos' es una métrica clave que mide la efectividad del proceso de pruebas. Un alto número de fugas indica problemas en la estrategia o ejecución de las pruebas."
-  },
-  {
-    module: "Gestión de Pruebas",
-    question: "En el ciclo de vida de un defecto, ¿cuál es el estado inicial?",
-    options: ["Abierto", "Nuevo", "Asignado", "En progreso"],
-    correctAnswer: "Nuevo",
-    explanation: "Cuando un tester encuentra y reporta un defecto por primera vez, este ingresa al sistema de seguimiento en estado 'Nuevo', a la espera de ser validado y asignado."
-  },
-  {
-    module: "Gestión de Pruebas",
-    question: "¿Qué es la 'deuda técnica' en el contexto de QA?",
-    options: ["El costo de adquirir nuevas herramientas de testing.", "El resultado implícito de optar por una solución fácil ahora en lugar de usar un mejor enfoque que tomaría más tiempo.", "El tiempo que el equipo de QA le debe al equipo de desarrollo.", "Un presupuesto asignado para corregir errores."],
-    correctAnswer: "El resultado implícito de optar por una solución fácil ahora en lugar de usar un mejor enfoque que tomaría más tiempo.",
-    explanation: "La deuda técnica, como una deuda financiera, genera 'intereses' en forma de mayor dificultad para mantener el código y corregir errores en el futuro. Puede afectar tanto al desarrollo como a la automatización de pruebas."
-  },
-  {
-    module: "Gestión de Pruebas",
-    question: "En Scrum, una 'User Story' (Historia de Usuario) debe tener:",
-    options: ["Un diagrama de flujo detallado.", "Criterios de Aceptación claros.", "El código fuente asociado.", "Un plan de pruebas formal."],
-    correctAnswer: "Criterios de Aceptación claros.",
-    explanation: "Los Criterios de Aceptación son las condiciones que la historia de usuario debe cumplir para ser considerada 'terminada'. Son la base para las pruebas y aseguran que todos entiendan el objetivo."
-  },
-  {
-    module: "Gestión de Pruebas",
-    question: "¿Qué es la 'Trazabilidad' en el contexto de las pruebas?",
-    options: ["La capacidad de seguir un defecto hasta su corrección.", "La relación que vincula los requisitos, los casos de prueba, los resultados de las pruebas y los defectos.", "La habilidad de un tester para trazar un plan.", "El seguimiento del tiempo dedicado a las pruebas."],
-    correctAnswer: "La relación que vincula los requisitos, los casos de prueba, los resultados de las pruebas y los defectos.",
-    explanation: "La matriz de trazabilidad permite asegurar que todos los requisitos han sido cubiertos por casos de prueba y ayuda a evaluar el impacto de los cambios en los requisitos."
-  },
-  {
-    module: "Gestión de Pruebas",
-    question: "¿Qué define el 'Criterio de Salida' (Exit Criteria) en un plan de pruebas?",
-    options: ["El momento en que comienzan las pruebas.", "Las condiciones que deben cumplirse para dar por finalizada una fase de pruebas.", "La lista de testers que abandonan el proyecto.", "Los criterios para contratar a un nuevo QA."],
-    correctAnswer: "Las condiciones que deben cumplirse para dar por finalizada una fase de pruebas.",
-    explanation: "Los criterios de salida son objetivos medibles, como 'el 95% de los casos de prueba críticos deben pasar' o 'no debe haber defectos bloqueantes abiertos'. Ayudan a tomar decisiones informadas sobre si el software está listo."
-  },
-  {
-    module: "Gestión de Pruebas",
-    question: "En un reporte de defecto, ¿cuál de los siguientes campos es el más crucial para la reproducibilidad?",
-    options: ["La severidad asignada.", "El nombre del tester que lo encontró.", "Los pasos detallados para reproducir el error.", "La fecha y hora del hallazgo."],
-    correctAnswer: "Los pasos detallados para reproducir el error.",
-    explanation: "Si un desarrollador no puede reproducir un defecto, no puede corregirlo. Pasos claros, concisos y numerados son esenciales para un reporte de defecto efectivo."
-  },
-
-  // Módulo 5: Automatización y Herramientas (9 preguntas)
-  {
-    module: "Automatización y Herramientas",
-    question: "¿Cuál de las siguientes herramientas se utiliza comúnmente para la automatización de pruebas de UI web?",
-    options: ["Jira", "Postman", "Selenium", "Jenkins"],
-    correctAnswer: "Selenium",
-    explanation: "Selenium es un estándar de la industria para la automatización de navegadores web. Permite crear scripts que simulan la interacción de un usuario con la interfaz de una aplicación web."
-  },
-  {
-    module: "Automatización y Herramientas",
-    question: "Una herramienta como Postman o Insomnia se usa principalmente para:",
-    options: ["Pruebas de UI web.", "Pruebas de bases de datos.", "Pruebas de API (servicios web).", "Gestión de proyectos."],
-    correctAnswer: "Pruebas de API (servicios web).",
-    explanation: "Estas herramientas permiten enviar peticiones (GET, POST, PUT, etc.) a los endpoints de una API y verificar que las respuestas (códigos de estado, datos) son las esperadas."
-  },
-  {
-    module: "Automatización y Herramientas",
-    question: "En la pirámide de automatización de pruebas, ¿qué tipo de pruebas debería tener la mayor cobertura?",
-    options: ["Pruebas de UI (End-to-End)", "Pruebas Manuales", "Pruebas Unitarias", "Pruebas de Aceptación"],
-    correctAnswer: "Pruebas Unitarias",
-    explanation: "La pirámide de pruebas sugiere tener una base amplia de pruebas unitarias (rápidas y baratas), una capa intermedia de pruebas de API/integración, y una pequeña capa superior de pruebas de UI (lentas y frágiles)."
-  },
-  {
-    module: "Automatización y Herramientas",
-    question: "¿Cuál es un beneficio clave de la Integración Continua (CI) para QA?",
-    options: ["Elimina la necesidad de pruebas manuales.", "Permite detectar errores de integración de forma temprana y frecuente.", "Garantiza que el software nunca tendrá defectos.", "Solo beneficia a los desarrolladores."],
-    correctAnswer: "Permite detectar errores de integración de forma temprana y frecuente.",
-    explanation: "CI/CD integra automáticamente el código de varios desarrolladores y ejecuta pruebas (unitarias, de integración) en cada cambio, lo que permite identificar problemas de compatibilidad casi al instante."
-  },
-    {
-    module: "Automatización y Herramientas",
-    question: "¿Qué es el 'Page Object Model' (POM)?",
-    options: ["Un tipo de prueba de rendimiento.", "Un patrón de diseño en la automatización de pruebas que crea un repositorio de objetos para las páginas de la aplicación.", "Una herramienta para gestionar proyectos de automatización.", "Un lenguaje de scripting para Selenium."],
-    correctAnswer: "Un patrón de diseño en la automatización de pruebas que crea un repositorio de objetos para las páginas de la aplicación.",
-    explanation: "POM mejora la mantenibilidad del código de automatización al separar la lógica de las pruebas de la definición de los elementos de la UI. Si la UI cambia, solo se actualiza el 'Page Object' correspondiente, no todos los scripts de prueba."
-  },
-  {
-    module: "Automatización y Herramientas",
-    question: "En automatización, ¿qué es un 'locator' (localizador)?",
-    options: ["Un tester asignado a una ubicación geográfica.", "Una forma de encontrar y interactuar con un elemento en una página web (ej. por ID, CSS Selector, XPath).", "Un tipo de defecto.", "Una variable global en un script."],
-    correctAnswer: "Una forma de encontrar y interactuar con un elemento en una página web (ej. por ID, CSS Selector, XPath).",
-    explanation: "Para que un script de automatización haga clic en un botón o escriba en un campo, primero debe 'localizarlo' en la estructura HTML de la página. La elección de un buen localizador (estable y único) es clave para evitar pruebas frágiles."
-  },
-  {
-    module: "Automatización y Herramientas",
-    question: "Un método de API que puede ser llamado múltiples veces con el mismo resultado se considera:",
-    options: ["Volátil", "Idempotente", "Síncrono", "Asíncrono"],
-    correctAnswer: "Idempotente",
-    explanation: "La idempotencia es un concepto clave en las pruebas de API. Por ejemplo, una petición DELETE debería dar el mismo resultado (el recurso ya no existe) si se ejecuta una o diez veces. GET, PUT y DELETE suelen ser idempotentes, mientras que POST no lo es."
-  },
-  {
-    module: "Automatización y Herramientas",
-    question: "¿Qué es 'BDD' (Behavior-Driven Development)?",
-    options: ["Una técnica de pruebas de bases de datos.", "Un proceso de desarrollo de software que fomenta la colaboración entre desarrolladores, QA y negocio usando un lenguaje natural como Gherkin (Given-When-Then).", "Una herramienta de automatización.", "Un sinónimo de desarrollo ágil."],
-    correctAnswer: "Un proceso de desarrollo de software que fomenta la colaboración entre desarrolladores, QA y negocio usando un lenguaje natural como Gherkin (Given-When-Then).",
-    explanation: "BDD utiliza ejemplos en lenguaje natural para describir el comportamiento esperado del sistema. Estos ejemplos pueden automatizarse (usando herramientas como Cucumber) para servir como pruebas de aceptación."
-  },
-  {
-    module: "Automatización y Herramientas",
-    question: "La principal ventaja de las pruebas de API sobre las pruebas de UI es que son:",
-    options: ["Más fáciles de entender para los usuarios de negocio.", "Más visuales y atractivas.", "Generalmente más rápidas, estables y menos propensas a romperse por cambios cosméticos.", "Capaces de encontrar todos los tipos de defectos."],
-    correctAnswer: "Generalmente más rápidas, estables y menos propensas a romperse por cambios cosméticos.",
-    explanation: "Las pruebas de API interactúan directamente con la lógica de negocio, evitando la fragilidad y lentitud del navegador. Por eso la pirámide de pruebas recomienda tener una base de automatización más amplia a nivel de API que de UI."
+    module: "Metodologías Ágiles y Scrum",
+    question: "En un equipo Scrum, la calidad del producto es responsabilidad de:",
+    options: [
+      "Únicamente el equipo de QA.",
+      "El Scrum Master, que debe velar por el proceso.",
+      "El Product Owner, que define los requisitos de calidad.",
+      "Todo el equipo Scrum (desarrolladores, QA, PO)."
+    ],
+    correctAnswer: "Todo el equipo Scrum (desarrolladores, QA, PO).",
+    explanation: "En los marcos ágiles, la calidad es una responsabilidad compartida. Todo el equipo se compromete a entregar un incremento de producto de alta calidad al final de cada sprint."
   },
   
-  // Módulo 6: Resolución de Escenarios (9 preguntas)
+  // Módulo 3: Técnicas de Prueba
   {
-    module: "Resolución de Escenarios",
-    question: "Encuentras un defecto crítico a un día del lanzamiento. No hay tiempo para una corrección y un ciclo de regresión completo. ¿Cuál es tu acción más importante?",
-    options: ["Cancelar el lanzamiento inmediatamente.", "Ignorar el defecto y esperar que los usuarios no lo encuentren.", "Comunicar claramente el riesgo (qué es, impacto, probabilidad) al Product Manager y al equipo para tomar una decisión informada.", "Intentar corregir el código tú mismo."],
-    correctAnswer: "Comunicar claramente el riesgo (qué es, impacto, probabilidad) al Product Manager y al equipo para tomar una decisión informada.",
-    explanation: "El rol del QA en esta situación no es tomar la decisión final, sino proporcionar toda la información necesaria para que el negocio pueda evaluar el riesgo. La comunicación clara y la evaluación de impacto son cruciales."
+    module: "Técnicas de Prueba",
+    question: "Estás probando un campo de edad que acepta valores entre 18 y 65 años. Usando 'Análisis de Valores Límite', ¿cuál de los siguientes conjuntos de datos es el MÁS efectivo?",
+    options: [
+      "18, 40, 65",
+      "17, 18, 19, 64, 65, 66",
+      "0, 100",
+      "Cualquier número dentro y fuera del rango, como 25 y 99."
+    ],
+    correctAnswer: "17, 18, 19, 64, 65, 66",
+    explanation: "El Análisis de Valores Límite prueba los valores justo en los límites (18, 65), así como los valores inmediatamente adyacentes a cada lado (17, 19 y 64, 66), ya que es donde suelen ocurrir los errores de lógica."
   },
   {
-    module: "Resolución de Escenarios",
-    question: "Te piden probar una nueva funcionalidad, pero la documentación de requisitos es vaga e incompleta. ¿Qué deberías hacer primero?",
-    options: ["Empezar a probar al azar y esperar encontrar errores.", "Rechazar la tarea hasta que la documentación sea perfecta.", "Utilizar técnicas de testing exploratorio y colaborar activamente con el Product Owner y desarrolladores para aclarar dudas.", "Inventar los requisitos que crees que faltan."],
-    correctAnswer: "Utilizar técnicas de testing exploratorio y colaborar activamente con el Product Owner y desarrolladores para aclarar dudas.",
-    explanation: "La ambigüedad es común. Un QA proactivo no espera, sino que genera la información necesaria a través de la exploración del software y la comunicación directa con el equipo para definir los criterios de aceptación."
+    module: "Técnicas de Prueba",
+    question: "Una aplicación ofrece descuentos de envío según el tipo de usuario (Normal, Premium) y el monto de la compra (<$50, >=$50). ¿Qué técnica de prueba es la más sistemática para diseñar casos de prueba para estas reglas de negocio?",
+    options: [
+      "Testing exploratorio.",
+      "Análisis de valores límite.",
+      "Tablas de decisión.",
+      "Transición de estados."
+    ],
+    correctAnswer: "Tablas de decisión.",
+    explanation: "Las tablas de decisión son perfectas para modelar y probar lógicas complejas con múltiples condiciones de entrada (tipo de usuario, monto) y sus correspondientes resultados (descuento aplicado)."
   },
   {
-    module: "Resolución de Escenarios",
-    question: "Un desarrollador te dice que un defecto que reportaste 'no es un bug, es una característica'. ¿Cómo procedes?",
-    options: ["Cerrar el defecto inmediatamente y disculparte.", "Escalar el problema directamente a la alta gerencia.", "Revisar los requisitos o Criterios de Aceptación. Si no están claros, iniciar una conversación con el Product Owner para que defina el comportamiento esperado.", "Insistir en que es un bug sin más argumentos."],
-    correctAnswer: "Revisar los requisitos o Criterios de Aceptación. Si no están claros, iniciar una conversación con el Product Owner para que defina el comportamiento esperado.",
-    explanation: "La fuente de la verdad debe ser el requisito del negocio. Si el comportamiento actual contradice lo esperado por el Product Owner, es un defecto. Si no, podría ser una oportunidad para mejorar el requisito."
+    module: "Técnicas de Prueba",
+    question: "Se te pide probar el flujo de estados de un pedido en un e-commerce (Pendiente -> Procesando -> Enviado -> Entregado). ¿Qué técnica te ayudaría a visualizar y probar todas las transiciones posibles, incluyendo las inválidas (ej. de 'Pendiente' a 'Entregado')?",
+    options: [
+      "Partición de equivalencia.",
+      "Diagrama de transición de estados.",
+      "Cobertura de sentencias.",
+      "Adivinación de errores (Error guessing)."
+    ],
+    correctAnswer: "Diagrama de transición de estados.",
+    explanation: "Esta técnica es ideal para sistemas que tienen un número finito de estados. Ayuda a diseñar pruebas que cubran cada transición válida e intente realizar transiciones inválidas para verificar el control de errores."
   },
   {
-    module: "Resolución de Escenarios",
-    question: "El equipo quiere mejorar la cobertura de pruebas de regresión automatizadas. ¿Qué tipo de casos de prueba son los mejores candidatos para automatizar primero?",
-    options: ["Casos de prueba que se ejecutan una sola vez.", "Funcionalidades que son complejas y cambian constantemente.", "Los flujos críticos del negocio que son repetitivos, estables y cubren las funcionalidades más importantes (ej. login, compra).", "Pruebas de usabilidad y diseño visual."],
-    correctAnswer: "Los flujos críticos del negocio que son repetitivos, estables y cubren las funcionalidades más importantes (ej. login, compra).",
-    explanation: "La automatización debe tener un buen retorno de inversión. Se deben priorizar las pruebas que ahorran más tiempo y reducen más riesgo al ejecutarse de forma frecuente, como los 'happy paths' y funcionalidades clave del sistema."
+    module: "Técnicas de Prueba",
+    question: "Acabas de recibir una nueva funcionalidad para probar, pero la documentación es mínima. Tienes libertad para investigar la aplicación como lo haría un usuario. ¿Qué enfoque de testing estás aplicando?",
+    options: [
+      "Pruebas de regresión.",
+      "Pruebas de caja blanca.",
+      "Pruebas de aceptación de usuario (UAT).",
+      "Testing exploratorio."
+    ],
+    correctAnswer: "Testing exploratorio.",
+    explanation: "El testing exploratorio combina el aprendizaje, el diseño de pruebas y la ejecución de forma simultánea. Es una técnica basada en la experiencia, muy útil para descubrir defectos inesperados cuando la documentación es escasa."
   },
   {
-    module: "Resolución de Escenarios",
-    question: "Se implementa un nuevo formulario de registro. Aplicando técnicas de prueba, ¿cuál de las siguientes estrategias sería la más completa?",
-    options: ["Solo probar el 'happy path' con datos válidos.", "Probar los límites de cada campo (ej. longitud de contraseña), particiones de equivalencia (emails válidos/inválidos) y la lógica de negocio con tablas de decisión (ej. edad mínima).", "Solo probar con todos los campos vacíos.", "Verificar que los colores de los botones sean correctos."],
-    correctAnswer: "Probar los límites de cada campo (ej. longitud de contraseña), particiones de equivalencia (emails válidos/inválidos) y la lógica de negocio con tablas de decisión (ej. edad mínima).",
-    explanation: "Una buena estrategia de pruebas combina múltiples técnicas de caja negra para cubrir no solo el flujo exitoso, sino también los casos de error, los valores límite y las reglas de negocio complejas de manera eficiente."
+    module: "Técnicas de Prueba",
+    question: "Un campo de texto debe aceptar nombres de usuario de entre 5 y 15 caracteres alfanuméricos. Usando 'Partición de Equivalencia', ¿cuántas particiones (clases) de datos deberías considerar como mínimo?",
+    options: [
+      "Dos: una válida (5-15) y una inválida (cualquier otra cosa).",
+      "Tres: una inválida por debajo (4 caracteres), una válida (ej. 10 caracteres) y una inválida por encima (16 caracteres).",
+      "Cuatro: una inválida (muy corta), una válida, una inválida (muy larga) y otra inválida (con caracteres especiales como '@#$').",
+      "Solo una: un nombre de usuario válido de 10 caracteres."
+    ],
+    correctAnswer: "Cuatro: una inválida (muy corta), una válida, una inválida (muy larga) and otra inválida (con caracteres especiales como '@#$').",
+    explanation: "Una buena partición de equivalencia considera todas las reglas. Se necesitan particiones para probar la longitud (demasiado corta, válida, demasiado larga) y la composición de los caracteres (válidos vs. inválidos)."
   },
   {
-    module: "Resolución de Escenarios",
-    question: "Constantemente aparecen defectos en producción en un módulo específico. ¿Qué acción estratégica propondrías al equipo?",
-    options: ["Pedir que se reescriba todo el módulo desde cero.", "Culpar al desarrollador responsable de ese módulo.", "Proponer un análisis de causa raíz de los defectos y sugerir mejoras como aumentar la cobertura de pruebas unitarias y de integración en esa área.", "Contratar más testers manuales para revisar ese módulo."],
-    correctAnswer: "Proponer un análisis de causa raíz de los defectos y sugerir mejoras como aumentar la cobertura de pruebas unitarias y de integración en esa área.",
-    explanation: "Un QA estratégico no solo encuentra defectos, sino que ayuda a prevenir que ocurran en el futuro. Analizar patrones de fallos y proponer mejoras en el proceso (como aplicar el principio de 'agrupación de defectos') es clave."
+    module: "Técnicas de Prueba",
+    question: "¿En cuál de los siguientes escenarios un QA está aplicando una técnica de 'caja blanca'?",
+    options: [
+      "Prueba un formulario de login introduciendo un email válido y uno inválido para ver la respuesta del sistema.",
+      "Ejecuta una serie de pruebas automatizadas de UI y luego revisa un reporte de cobertura de código para ver qué líneas se ejecutaron.",
+      "Utiliza Postman para enviar una petición a una API y verificar que el código de estado de la respuesta es 200 OK.",
+      "Sigue los pasos descritos en un caso de prueba para verificar una nueva funcionalidad."
+    ],
+    correctAnswer: "Ejecuta una serie de pruebas automatizadas de UI y luego revisa un reporte de cobertura de código para ver qué líneas se ejecutaron.",
+    explanation: "Las técnicas de caja blanca requieren conocimiento de la estructura interna del código. La cobertura de código es una métrica clásica de caja blanca para medir qué tan a fondo se ha probado el código fuente."
   },
   {
-    module: "Resolución de Escenarios",
-    question: "Tienes que estimar el esfuerzo de prueba para una nueva historia de usuario. ¿En qué basarías tu estimación?",
-    options: ["En un número al azar.", "Solo en la cantidad de líneas de código que se cambiarán.", "En la complejidad de la funcionalidad, los riesgos asociados, las dependencias con otros sistemas y los criterios de aceptación.", "En cuánto tiempo tardó el desarrollador en codificarla."],
-    correctAnswer: "En la complejidad de la funcionalidad, los riesgos asociados, las dependencias con otros sistemas y los criterios de aceptación.",
-    explanation: "Una buena estimación de pruebas es multifactorial. Considera la complejidad, el impacto potencial de un fallo (riesgo), cuántos otros sistemas podrían verse afectados y qué tan claros y extensos son los requisitos a validar."
+    module: "Técnicas de Prueba",
+    question: "Estás probando la funcionalidad de 'subir foto de perfil'. Basado en la técnica de 'adivinación de errores' (error guessing), ¿cuál de los siguientes casos de prueba NO intentarías?",
+    options: [
+      "Subir una imagen con un formato no soportado (ej. un .zip renombrado a .jpg).",
+      "Subir una imagen extremadamente grande (ej. 50 MB).",
+      "Subir un archivo que no es una imagen (ej. un documento .pdf).",
+      "Subir una imagen de 500x500 píxeles en formato .png, como se especifica en los requisitos."
+    ],
+    correctAnswer: "Subir una imagen de 500x500 píxeles en formato .png, como se especifica en los requisitos.",
+    explanation: "La adivinación de errores es una técnica basada en la experiencia para encontrar bugs anticipando errores comunes. Probar el 'camino feliz' (happy path) es una técnica de caja negra, pero no es 'adivinación de errores'."
   },
   {
-    module: "Resolución de Escenarios",
-    question: "Un test automatizado de UI falla de forma intermitente. A veces pasa, a veces no. ¿Cuál es la causa más probable?",
-    options: ["El bug es real pero solo aparece a veces.", "Problemas de sincronización: el script intenta interactuar con un elemento antes de que esté completamente cargado en la página.", "La aplicación no tiene errores.", "La herramienta de automatización está corrupta."],
-    correctAnswer: "Problemas de sincronización: el script intenta interactuar con un elemento antes de que esté completamente cargado en la página.",
-    explanation: "La inestabilidad (flakiness) en las pruebas de UI es a menudo causada por problemas de 'timing' o esperas. El script es más rápido que la aplicación. Implementar esperas explícitas o dinámicas (explicit/fluent waits) es la solución común."
+    module: "Técnicas de Prueba",
+    question: "Tu equipo está construyendo una API REST. El desarrollador te pide que revises el código de un controlador para asegurar que todas las posibles ramas de un 'if-else' (manejo de errores y éxito) están cubiertas por sus pruebas unitarias. ¿Qué métrica de cobertura estáis analizando?",
+    options: [
+      "Cobertura de API.",
+      "Cobertura de sentencias.",
+      "Cobertura de decisión (o de rama).",
+      "Cobertura de requisitos."
+    ],
+    correctAnswer: "Cobertura de decisión (o de rama).",
+    explanation: "La cobertura de decisión es una métrica de caja blanca que comprueba si se han ejecutado todos los resultados posibles de las estructuras de control (como los bloques 'if' y 'else'). Es más exhaustiva que la simple cobertura de sentencias."
   },
   {
-    module: "Resolución de Escenarios",
-    question: "El Product Owner te pide que 'pruebes todo' antes de un lanzamiento importante. ¿Cómo respondes?",
-    options: ["Aceptas y trabajas 24/7 para intentarlo.", "Le explicas que las pruebas exhaustivas son imposibles (uno de los 7 principios) y propones enfocar los esfuerzos en las áreas de mayor riesgo y en las funcionalidades más críticas.", "Dices que no es tu trabajo definir el alcance.", "Pides duplicar el tamaño del equipo de QA."],
-    correctAnswer: "Le explicas que las pruebas exhaustivas son imposibles (uno de los 7 principios) y propones enfocar los esfuerzos en las áreas de mayor riesgo y en las funcionalidades más críticas.",
-    explanation: "Parte del rol de un QA es educar al equipo sobre los principios de las pruebas. Una respuesta profesional se enfoca en la gestión de riesgos para maximizar el valor de las pruebas con los recursos y el tiempo disponibles."
+    module: "Técnicas de Prueba",
+    question: "¿En qué situación es más valioso aplicar el 'testing exploratorio' en lugar de seguir casos de prueba predefinidos?",
+    options: [
+      "Al ejecutar la suite de regresión semanal, que debe ser consistente y repetible.",
+      "Al verificar los requisitos de una funcionalidad crítica y bien documentada.",
+      "Al realizar una prueba de humo sobre una nueva build.",
+      "Cuando se integra un nuevo componente y se quiere descubrir cómo interactúa con el resto del sistema de forma inesperada."
+    ],
+    correctAnswer: "Cuando se integra un nuevo componente y se quiere descubrir cómo interactúa con el resto del sistema de forma inesperada.",
+    explanation: "El testing exploratorio brilla cuando el objetivo es el aprendizaje y el descubrimiento de bugs no obvios. Es menos estructurado y permite al tester usar su creatividad y experiencia para investigar la aplicación."
   },
 
-  // Módulo 7: Metodologías Ágiles y Scrum (9 preguntas)
+  // Módulo 4: Gestión de Pruebas -> 10 preguntas
   {
-    module: "Metodologías Ágiles y Scrum",
-    question: "¿Cuál es el rol principal del Product Owner en un equipo Scrum?",
-    options: ["Gestionar al equipo de desarrollo.", "Asegurar que el equipo siga las reglas de Scrum.", "Maximizar el valor del producto gestionando el Product Backlog.", "Escribir el código de las historias de usuario."],
-    correctAnswer: "Maximizar el valor del producto gestionando el Product Backlog.",
-    explanation: "El Product Owner es la voz del cliente. Su responsabilidad es definir y priorizar los elementos del Product Backlog para asegurar que el equipo de desarrollo construya el producto más valioso posible."
+    module: "Gestión de Pruebas",
+    question: "Encuentras un bug que bloquea el login de la aplicación a un día del lanzamiento. ¿Cuál es la acción más profesional y urgente que debes tomar?",
+    options: [
+      "Avisar a un desarrollador por chat informalmente para que lo mire.",
+      "Documentar el bug con pasos claros, logs y capturas, y comunicarlo inmediatamente al Product Owner y al Tech Lead para una decisión.",
+      "Intentar solucionarlo por tu cuenta revisando el código fuente para agilizar.",
+      "Revertir la última versión del código en el entorno de pruebas y seguir probando otras cosas."
+    ],
+    correctAnswer: "Documentar el bug con pasos claros, logs y capturas, y comunicarlo inmediatamente al Product Owner y al Tech Lead para una decisión.",
+    explanation: "La prioridad es asegurar que el bug sea visible, reproducible y que las personas correctas (quienes toman decisiones de negocio y técnicas) tengan toda la información para evaluar el riesgo y decidir el curso de acción."
   },
   {
-    module: "Metodologías Ágiles y Scrum",
-    question: "¿Cuál es el propósito de la 'Sprint Retrospective'?",
-    options: ["Planificar el trabajo para el próximo Sprint.", "Demostrar el incremento del producto a los stakeholders.", "Inspeccionar el último Sprint y crear un plan de mejoras para el siguiente.", "Sincronizar el trabajo diario del equipo de desarrollo."],
-    correctAnswer: "Inspeccionar el último Sprint y crear un plan de mejoras para el siguiente.",
-    explanation: "La Retrospectiva es una reunión para el equipo Scrum donde se reflexiona sobre qué funcionó bien, qué no, y qué se puede mejorar en el proceso para el próximo Sprint. Es un pilar de la mejora continua."
+    module: "Gestión de Pruebas",
+    question: "Un desarrollador cierra un bug que reportaste con el comentario: 'No es un bug, es una característica'. ¿Cómo procedes de la manera más constructiva?",
+    options: [
+      "Reabrir el bug inmediatamente insistiendo en que es un fallo.",
+      "Escalar el problema directamente al CTO de la empresa.",
+      "Revisar los requisitos o Criterios de Aceptación. Si el comportamiento no coincide, iniciar una conversación con el Product Owner para que defina lo esperado.",
+      "Aceptar la decisión del desarrollador, ya que él conoce mejor el código."
+    ],
+    correctAnswer: "Revisar los requisitos o Criterios de Aceptación. Si el comportamiento no coincide, iniciar una conversación con el Product Owner para que defina lo esperado.",
+    explanation: "La 'fuente de la verdad' son los requisitos del negocio, representados por el Product Owner. Si hay una discrepancia, el PO debe tomar la decisión final sobre el comportamiento deseado."
   },
   {
-    module: "Metodologías Ágiles y Scrum",
-    question: "La 'Daily Scrum' (reunión diaria) es un evento para:",
-    options: ["Reportar el estado del proyecto al Product Owner.", "El equipo de desarrollo, para planificar el trabajo de las próximas 24 horas.", "Los stakeholders, para que den su feedback.", "Asignar nuevas tareas al equipo."],
-    correctAnswer: "El equipo de desarrollo, para planificar el trabajo de las próximas 24 horas.",
-    explanation: "El propósito de la Daily es que el equipo de desarrollo se sincronice, inspeccione el progreso hacia el Sprint Goal y ajuste su plan para el día. No es una reunión de reporte de estado."
+    module: "Gestión de Pruebas",
+    question: "Al reportar un bug, ¿cuál es la diferencia clave entre 'Severidad' y 'Prioridad'?",
+    options: [
+      "Son lo mismo, solo que se usan términos diferentes en distintas empresas.",
+      "Severidad es definida por el QA y Prioridad por el desarrollador.",
+      "Severidad mide el impacto técnico del bug en el sistema, mientras que Prioridad mide la urgencia de negocio para corregirlo.",
+      "Severidad se aplica a bugs de UI y Prioridad a bugs de backend."
+    ],
+    correctAnswer: "Severidad mide el impacto técnico del bug en el sistema, mientras que Prioridad mide la urgencia de negocio para corregirlo.",
+    explanation: "Un bug puede tener severidad crítica (ej. una falta de ortografía en el nombre de la empresa en la home page) pero prioridad baja si no afecta la funcionalidad. O puede tener severidad baja (ej. un cálculo incorrecto en un reporte que nadie usa) pero prioridad alta si un cliente importante lo necesita."
   },
   {
-    module: "Metodologías Ágiles y Scrum",
-    question: "¿Qué es el 'Product Backlog'?",
-    options: ["Una lista de todos los defectos encontrados en el producto.", "Un plan detallado y fijo para todo el proyecto.", "Una lista ordenada y emergente de todo lo que se conoce que es necesario en el producto.", "El conjunto de tareas técnicas para un Sprint."],
-    correctAnswer: "Una lista ordenada y emergente de todo lo que se conoce que es necesario en el producto.",
-    explanation: "Es la única fuente de requisitos para cualquier cambio a realizarse en el producto. Es dinámico y su contenido y priorización pueden cambiar con el tiempo a medida que se aprende más."
+    module: "Gestión de Pruebas",
+    question: "Estás creando un plan de pruebas para un nuevo proyecto. ¿Qué define el 'Criterio de Salida' (Exit Criteria)?",
+    options: [
+      "La fecha final del proyecto establecida por la gerencia.",
+      "Las condiciones específicas y medibles que deben cumplirse para dar por finalizada una fase de pruebas (ej. '95% de los tests críticos pasados').",
+      "La lista de todos los casos de prueba que se van a ejecutar.",
+      "El momento en que el presupuesto para QA se ha agotado."
+    ],
+    correctAnswer: "Las condiciones específicas y medibles que deben cumplirse para dar por finalizada una fase de pruebas (ej. '95% de los tests críticos pasados').",
+    explanation: "Los criterios de salida son una red de seguridad objetiva. Ayudan al equipo a tomar una decisión informada sobre si el software está listo para la siguiente fase o para el lanzamiento, en lugar de basarse en sensaciones."
   },
   {
-    module: "Metodologías Ágiles y Scrum",
-    question: "El 'Definition of Done' (DoD) es:",
-    options: ["Una lista de tareas que debe completar el Product Owner.", "Un entendimiento compartido por todo el equipo Scrum sobre qué significa que el trabajo está completo y listo para ser entregado.", "Una checklist que solo usa el QA.", "El momento en que se termina el Sprint."],
-    correctAnswer: "Un entendimiento compartido por todo el equipo Scrum sobre qué significa que el trabajo está completo y listo para ser entregado.",
-    explanation: "El DoD es un estándar de calidad. Asegura que todos en el equipo tengan la misma idea de lo que implica 'terminado', incluyendo codificación, pruebas, documentación, etc., para cada elemento del backlog."
+    module: "Gestión de Pruebas",
+    question: "Para asegurar que todos los requisitos de una nueva épica han sido cubiertos por casos de prueba, ¿qué documento o artefacto es el más útil?",
+    options: [
+      "El plan de pruebas del proyecto.",
+      "Una matriz de trazabilidad de requisitos.",
+      "El reporte final de ejecución de pruebas.",
+      "El backlog del producto."
+    ],
+    correctAnswer: "Una matriz de trazabilidad de requisitos.",
+    explanation: "Una matriz de trazabilidad es una tabla que relaciona cada requisito con su(s) correspondiente(s) caso(s) de prueba. Permite visualizar rápidamente qué requisitos no tienen cobertura de pruebas o el impacto de un cambio en un requisito."
   },
   {
-    module: "Metodologías Ágiles y Scrum",
-    question: "¿Cuál de las siguientes afirmaciones es uno de los valores del Manifiesto Ágil?",
-    options: ["Seguir un plan por encima de la respuesta al cambio.", "Procesos y herramientas por encima de individuos e interacciones.", "Colaboración con el cliente por encima de la negociación de contratos.", "Documentación exhaustiva por encima de software funcionando."],
-    correctAnswer: "Colaboración con el cliente por encima de la negociación de contratos.",
-    explanation: "El Manifiesto Ágil valora los elementos de la derecha, pero valora más los de la izquierda. Los cuatro valores son: Individuos e interacciones, Software funcionando, Colaboración con el cliente y Respuesta al cambio."
+    module: "Gestión de Pruebas",
+    question: "Te piden estimar el esfuerzo de testing para una historia de usuario. ¿Cuál de los siguientes factores es el MENOS relevante para tu estimación?",
+    options: [
+      "La complejidad de los criterios de aceptación.",
+      "Las dependencias que la historia tiene con otros módulos o servicios.",
+      "El número de líneas de código que el desarrollador estima que escribirá.",
+      "Los riesgos asociados si la funcionalidad falla en producción."
+    ],
+    correctAnswer: "El número de líneas de código que el desarrollador estima que escribirá.",
+    explanation: "Las líneas de código son un mal indicador del esfuerzo de prueba. Una funcionalidad compleja puede requerir pocas líneas de código, pero muchas pruebas. La complejidad, el riesgo y las dependencias son factores mucho más fiables."
   },
   {
-    module: "Metodologías Ágiles y Scrum",
-    question: "En el contexto de un 'Agile Tester', ¿cuál de estas mentalidades es la más adecuada?",
-    options: ["Actuar como un 'guardián de la calidad' al final del proceso.", "Prevenir defectos colaborando con el equipo desde el inicio, en lugar de solo encontrarlos al final.", "Escribir la mayor cantidad de casos de prueba posibles, sin importar su relevancia.", "Automatizar todas las pruebas, sin excepción."],
-    correctAnswer: "Prevenir defectos colaborando con el equipo desde el inicio, en lugar de solo encontrarlos al final.",
-    explanation: "Un Agile Tester adopta un enfoque de 'shift-left', participando activamente en la definición de requisitos y colaborando con los desarrolladores para construir la calidad en el producto desde el principio."
+    module: "Gestión de Pruebas",
+    question: "Un desarrollador junior te entrega una funcionalidad para probar. La pruebas y encuentras 15 bugs, algunos de ellos muy básicos. ¿Cuál es la forma más constructiva de proceder?",
+    options: [
+      "Reportar los 15 bugs en la herramienta de seguimiento y asignárselos todos al desarrollador.",
+      "Hablar directamente con el desarrollador, mostrarle los bugs más importantes, explicarle el patrón de errores y sugerirle que haga una revisión más profunda antes de volver a entregarla.",
+      "Rechazar la historia y comunicarle al Scrum Master que el trabajo es de muy baja calidad.",
+      "Corregir los bugs más simples tú mismo para ahorrar tiempo."
+    ],
+    correctAnswer: "Hablar directamente con el desarrollador, mostrarle los bugs más importantes, explicarle el patrón de errores y sugerirle que haga una revisión más profunda antes de volver a entregarla.",
+    explanation: "El objetivo es construir un equipo de calidad, no solo encontrar bugs. Una comunicación constructiva y la mentoría ayudan a prevenir errores en el futuro y fomentan una buena relación de trabajo."
   },
   {
-    module: "Metodologías Ágiles y Scrum",
-    question: "¿Cuál es el rol principal del Scrum Master?",
-    options: ["Es el jefe del proyecto y asigna tareas.", "Se asegura de que el equipo siga los valores y prácticas de Scrum, eliminando impedimentos.", "Decide qué funcionalidades se construirán en el producto.", "Es el responsable de las pruebas de aceptación."],
-    correctAnswer: "Se asegura de que el equipo siga los valores y prácticas de Scrum, eliminando impedimentos.",
-    explanation: "El Scrum Master es un líder servicial. Su función es facilitar el proceso de Scrum, proteger al equipo de interrupciones externas y ayudar a eliminar cualquier obstáculo que impida su progreso."
+    module: "Gestión de Pruebas",
+    question: "El Product Owner te pregunta por el 'estado de la calidad' del producto antes de un lanzamiento. ¿Cuál es la mejor manera de comunicar esta información?",
+    options: [
+      "Decir 'Creo que estamos bien, la mayoría de las pruebas pasaron'.",
+      "Enviar una lista con todos los bugs encontrados hasta la fecha.",
+      "Proporcionar un resumen con métricas clave: porcentaje de casos de prueba ejecutados y pasados, número de bugs abiertos por prioridad y los riesgos conocidos.",
+      "Mostrarle el tablero Kanban para que él mismo pueda ver el estado de las tareas."
+    ],
+    correctAnswer: "Proporcionar un resumen con métricas clave: porcentaje de casos de prueba ejecutados y pasados, número de bugs abiertos por prioridad y los riesgos conocidos.",
+    explanation: "La comunicación efectiva de riesgos se basa en datos objetivos. Un buen reporte resume la información, la presenta de forma clara y destaca los riesgos más importantes para que se puedan tomar decisiones informadas."
   },
   {
-    module: "Metodologías Ágiles y Scrum",
-    question: "¿Qué artefacto de Scrum se crea durante la Sprint Planning?",
-    options: ["El Product Backlog.", "El Sprint Backlog.", "El incremento del producto.", "La Definition of Done."],
-    correctAnswer: "El Sprint Backlog.",
-    explanation: "El Sprint Backlog es el conjunto de elementos del Product Backlog seleccionados para el Sprint, más un plan para entregar el incremento del producto y realizar el Sprint Goal. Es el plan de trabajo del equipo de desarrollo para el Sprint."
+    module: "Gestión de Pruebas",
+    question: "¿Qué es la 'fuga de defectos' (defect leakage) y por qué es una métrica importante para un equipo de QA?",
+    options: [
+      "Es el número de bugs que un desarrollador introduce por cada nueva funcionalidad.",
+      "Es una medida de cuántos defectos son encontrados por el equipo de QA antes del lanzamiento.",
+      "Mide el porcentaje de defectos que no fueron detectados por QA y que fueron encontrados por los usuarios en producción.",
+      "Es el tiempo que tarda un bug en ser corregido desde que se reporta."
+    ],
+    correctAnswer: "Mide el porcentaje de defectos que no fueron detectados por QA y que fueron encontrados por los usuarios en producción.",
+    explanation: "La fuga de defectos es un indicador clave de la efectividad del proceso de pruebas. Un alto índice de fuga sugiere que la estrategia de pruebas (cobertura, técnicas, etc.) necesita ser revisada y mejorada."
+  },
+  {
+    module: "Gestión de Pruebas",
+    question: "Se te pide crear un reporte de bug para un problema que ocurre de forma intermitente. ¿Qué elemento es el MÁS crucial incluir en el reporte para ayudar al desarrollador?",
+    options: [
+      "Tu opinión sobre cuál podría ser la causa del problema.",
+      "Los logs de la aplicación, la consola del navegador y cualquier detalle del entorno (versión, navegador) capturados en el momento del fallo.",
+      "Una descripción vaga como 'A veces la página de checkout no funciona'.",
+      "La prioridad del bug establecida como 'Máxima' para asegurar que se le preste atención."
+    ],
+    correctAnswer: "Los logs de la aplicación, la consola del navegador y cualquier detalle del entorno (versión, navegador) capturados en el momento del fallo.",
+    explanation: "Para bugs intermitentes, la reproducibilidad es el mayor desafío. Los logs y la información del entorno son pistas vitales para que el desarrollador pueda diagnosticar el problema sin necesidad de verlo ocurrir."
+  },
+
+  // Módulo 5: Automatización y Herramientas -> 10 preguntas
+  {
+    module: "Automatización y Herramientas",
+    question: "Al probar una API con Postman, recibes un código de estado '403 Forbidden'. ¿Qué significa probablemente?",
+    options: [
+      "Que el servidor no encontró el endpoint al que intentas acceder.",
+      "Que el servidor ha tenido un error interno inesperado.",
+      "Que estás autenticado correctamente, pero tu usuario no tiene los permisos necesarios para realizar esa acción.",
+      "Que no has proporcionado ninguna credencial de autenticación válida."
+    ],
+    correctAnswer: "Que estás autenticado correctamente, pero tu usuario no tiene los permisos necesarios para realizar esa acción.",
+    explanation: "Es un error común confundir 401 y 403. 401 Unauthorized significa que la autenticación falló o no se proveyó. 403 Forbidden significa que la autenticación fue exitosa, pero la autorización (permisos) falló."
+  },
+  {
+    module: "Automatización y Herramientas",
+    question: "Un test automatizado de UI para el proceso de login falla de forma intermitente. A veces pasa, a veces no. ¿Cuál es la causa más probable y cómo la solucionarías?",
+    options: [
+      "El bug es real pero solo ocurre a veces en la aplicación.",
+      "La herramienta de automatización está corrupta y debe ser reinstalada.",
+      "Es un problema de sincronización: el script intenta interactuar con un elemento antes de que esté completamente cargado. Se soluciona con esperas explícitas (explicit waits).",
+      "El test está mal diseñado y se debe eliminar de la suite de regresión."
+    ],
+    correctAnswer: "Es un problema de sincronización: el script intenta interactuar con un elemento antes de que esté completamente cargado. Se soluciona con esperas explícitas (explicit waits).",
+    explanation: "La inestabilidad ('flakiness') es el mayor enemigo de la automatización de UI. La causa más común son las carreras de condición entre el script y la aplicación. Las esperas explícitas (ej. 'esperar hasta que el elemento sea clickeable') resuelven esto."
+  },
+  {
+    module: "Automatización y Herramientas",
+    question: "Según la pirámide de automatización de pruebas, ¿qué tipo de tests deberían ser los más numerosos en una estrategia de automatización saludable?",
+    options: [
+      "Tests End-to-End (UI) porque cubren los flujos completos del usuario.",
+      "Tests manuales exploratorios porque encuentran bugs inesperados.",
+      "Tests de API/Integración porque son un buen balance entre velocidad y cobertura.",
+      "Tests unitarios porque son los más rápidos, estables y baratos de mantener."
+    ],
+    correctAnswer: "Tests unitarios porque son los más rápidos, estables y baratos de mantener.",
+    explanation: "La pirámide de pruebas aboga por una base ancha de tests unitarios, una capa intermedia de tests de API/integración, y una pequeña capa superior de tests de UI. Esto crea una suite de automatización más rápida y confiable."
+  },
+  {
+    module: "Automatización y Herramientas",
+    question: "El equipo está implementando un pipeline de Integración Continua (CI). ¿Cuál es el principal objetivo de ejecutar una suite de tests automatizados en cada 'commit'?",
+    options: [
+      "Reemplazar por completo la necesidad de QAs manuales en el equipo.",
+      "Proporcionar feedback rápido a los desarrolladores para detectar errores de integración lo antes posible.",
+      "Generar reportes de calidad para la gerencia.",
+      "Asegurar que la aplicación funciona correctamente en producción."
+    ],
+    correctAnswer: "Proporcionar feedback rápido a los desarrolladores para detectar errores de integración lo antes posible.",
+    explanation: "El mantra de CI/CD es 'fallar rápido'. Al ejecutar tests en cada cambio, los desarrolladores pueden saber en minutos si su código ha roto algo, en lugar de enterarse días o semanas después, haciendo la corrección mucho más fácil."
+  },
+  {
+    module: "Automatización y Herramientas",
+    question: "Al probar una API, haces una petición DELETE para eliminar un recurso con ID 123. La primera vez responde '204 No Content'. La segunda vez que haces la misma petición, responde '404 Not Found'. ¿Este comportamiento es correcto?",
+    options: [
+      "No, una API siempre debería devolver el mismo código de estado para la misma petición.",
+      "Sí, porque la operación es idempotente; el estado final del sistema es el mismo (el recurso no existe) tras una o más llamadas.",
+      "No, la segunda vez debería devolver un '200 OK' indicando que la operación fue exitosa.",
+      "Sí, pero solo si la API está diseñada para ser RESTful."
+    ],
+    correctAnswer: "Sí, porque la operación es idempotente; el estado final del sistema es el mismo (el recurso no existe) tras una o más llamadas.",
+    explanation: "La idempotencia es un concepto clave en APIs. Una operación idempotente (como GET, PUT, DELETE) produce el mismo resultado en el servidor sin importar cuántas veces se ejecute. El comportamiento descrito es el esperado y correcto."
+  },
+  {
+    module: "Automatización y Herramientas",
+    question: "¿Cuál es el principal beneficio de utilizar el patrón de diseño 'Page Object Model' (POM) en la automatización de UI?",
+    options: [
+      "Hace que los tests se ejecuten mucho más rápido.",
+      "Separa la lógica de las pruebas de la definición de los localizadores de la UI, haciendo el código más mantenible y menos frágil a cambios visuales.",
+      "Genera automáticamente los casos de prueba a partir de los requisitos.",
+      "Permite escribir los tests en un lenguaje natural como Gherkin (Given-When-Then)."
+    ],
+    correctAnswer: "Separa la lógica de las pruebas de la definición de los localizadores de la UI, haciendo el código más mantenible y menos frágil a cambios visuales.",
+    explanation: "Con POM, si un botón cambia su ID, solo tienes que actualizarlo en un único lugar (el 'Page Object' correspondiente), en lugar de en cada test que interactúa con ese botón. Esto reduce drásticamente el costo de mantenimiento."
+  },
+  {
+    module: "Automatización y Herramientas",
+    question: "El equipo de desarrollo te informa que el endpoint `POST /users` no es idempotente. ¿Qué significa esto desde una perspectiva de testing?",
+    options: [
+      "Que no puedes probar el endpoint más de una vez.",
+      "Que si envías la misma petición dos veces, se crearán dos usuarios diferentes (dos recursos distintos).",
+      "Que el endpoint no sigue las buenas prácticas de diseño de APIs.",
+      "Que el endpoint siempre devolverá un error si se le llama repetidamente."
+    ],
+    correctAnswer: "Que si envías la misma petición dos veces, se crearán dos usuarios diferentes (dos recursos distintos).",
+    explanation: "Las operaciones POST típicamente no son idempotentes. Cada llamada a `POST /users` está diseñada para crear un nuevo recurso, por lo que múltiples llamadas idénticas resultarán en múltiples recursos nuevos, cambiando el estado del sistema cada vez."
+  },
+  {
+    module: "Automatización y Herramientas",
+    question: "Al escribir un script de automatización de UI, necesitas localizar un botón. ¿Cuál de los siguientes localizadores es el MÁS robusto y preferible?",
+    options: [
+      "Un XPath absoluto como '/html/body/div[2]/div[1]/div/button'.",
+      "El texto del botón, como '//*[text()=\"Comprar\"]'.",
+      "Un ID único y específico para testing, como 'id=\"buy-button\"'.",
+      "El selector de CSS basado en la clase, como '.btn-primary'."
+    ],
+    correctAnswer: "Un ID único y específico para testing, como 'id=\"buy-button\"'.",
+    explanation: "Los IDs son la forma más estable de localizar elementos, ya que no se ven afectados por cambios en la estructura de la página (a diferencia del XPath absoluto) o en el texto (a diferencia de la búsqueda por texto). Las clases pueden ser compartidas por múltiples elementos."
+  },
+  {
+    module: "Automatización y Herramientas",
+    question: "Estás probando una API que devuelve un objeto JSON grande. Solo necesitas verificar que el campo `user.id` es un número entero. ¿Qué herramienta o enfoque es el más eficiente en Postman?",
+    options: [
+      "Copiar manualmente toda la respuesta y pegarla en un validador de JSON online.",
+      "Usar la pestaña 'Tests' de Postman para escribir un script simple que verifique el tipo y valor de ese campo específico.",
+      "Revisar visualmente el campo `user.id` en la respuesta cada vez que ejecutas la petición.",
+      "Crear una prueba de UI con Selenium que llame a la API y muestre el resultado en la pantalla."
+    ],
+    correctAnswer: "Usar la pestaña 'Tests' de Postman para escribir un script simple que verifique el tipo y valor de ese campo específico.",
+    explanation: "Las aserciones automatizadas son el corazón de las pruebas de API. La pestaña 'Tests' de Postman permite escribir código JavaScript para validar programáticamente la respuesta, lo cual es repetible, rápido y fiable."
+  },
+  {
+    module: "Automatización y Herramientas",
+    question: "El equipo decide adoptar BDD (Behavior-Driven Development). ¿Cuál es el principal cambio en tu rol como QA?",
+    options: [
+      "Ahora eres el único responsable de escribir todo el código de automatización.",
+      "Debes enfocarte en escribir casos de prueba muy técnicos y detallados.",
+      "Tu rol principal ahora es escribir código en lugar de probar manualmente.",
+      "Colaboras activamente con el Product Owner y los desarrolladores para escribir escenarios en Gherkin (Given-When-Then) que describen el comportamiento esperado, los cuales luego se automatizan."
+    ],
+    correctAnswer: "Colaboras activamente con el Product Owner y los desarrolladores para escribir escenarios en Gherkin (Given-When-Then) que describen el comportamiento esperado, los cuales luego se automatizan.",
+    explanation: "BDD es un proceso de colaboración. El QA ayuda a traducir los requisitos de negocio en ejemplos concretos y ejecutables que sirven como documentación viva y como base para las pruebas de aceptación automatizadas."
+  },
+
+  // Módulo 6: Resolución de Escenarios
+  {
+    module: "Resolución de Escenarios",
+    question: "Estás probando en el entorno de Staging y descubres un bug crítico. El entorno de Desarrollo funciona bien y nadie más puede reproducirlo. ¿Cuál es tu primer paso para investigar?",
+    options: [
+      "Reportar el bug inmediatamente y asignarlo a un desarrollador.",
+      "Reiniciar el servidor de Staging y volver a probar.",
+      "Comparar la configuración, versiones de código y datos entre los entornos de Staging y Desarrollo para encontrar la discrepancia.",
+      "Asumir que es un problema temporal del entorno y continuar probando otras funcionalidades."
+    ],
+    correctAnswer: "Comparar la configuración, versiones de código y datos entre los entornos de Staging y Desarrollo para encontrar la discrepancia.",
+    explanation: "Los bugs que solo ocurren en un entorno ('It works on my machine') suelen ser causados por diferencias de configuración, dependencias o datos. El primer paso lógico es investigar esas diferencias."
+  },
+  {
+    module: "Resolución de Escenarios",
+    question: "El equipo ha acumulado 'deuda técnica' en la automatización: los tests son lentos y fallan a menudo. El management quiere seguir añadiendo tests para nuevas funcionalidades. ¿Qué deberías proponer?",
+    options: [
+      "Continuar añadiendo nuevos tests como se solicita, ya que la cobertura es lo más importante.",
+      "Proponer dedicar un 'sprint de refactorización' o asignar un porcentaje del tiempo de cada sprint para estabilizar la suite de tests existente antes de añadir más.",
+      "Sugerir eliminar toda la suite de automatización y empezar de cero, ya que es insalvable.",
+      "Pedir contratar a más QAs para que puedan ejecutar los tests fallidos manualmente."
+    ],
+    correctAnswer: "Proponer dedicar un 'sprint de refactorización' o asignar un porcentaje del tiempo de cada sprint para estabilizar la suite de tests existente antes de añadir más.",
+    explanation: "Ignorar la deuda técnica solo empeora el problema. Un QA estratégico aboga por la calidad del propio proceso de testing, negociando tiempo para mejorar la infraestructura y la fiabilidad de la automatización."
+  },
+  {
+    module: "Resolución de Escenarios",
+    question: "Se implementa un nuevo sistema de caché para mejorar el rendimiento. Tras el despliegue, la aplicación parece más rápida, pero los usuarios reportan ver datos desactualizados. ¿Qué tipo de pruebas se descuidaron probablemente?",
+    options: [
+      "Pruebas de humo (Smoke testing).",
+      "Pruebas de validación de caché e invalidación.",
+      "Pruebas de integración con sistemas de terceros.",
+      "Pruebas de compatibilidad de navegadores."
+    ],
+    correctAnswer: "Pruebas de validación de caché e invalidación.",
+    explanation: "La caché introduce complejidad. No es suficiente probar que los datos se cargan; es crucial probar que la caché se invalida (se borra) correctamente cuando los datos subyacentes cambian (ej. un usuario actualiza su perfil)."
+  },
+  {
+    module: "Resolución de Escenarios",
+    question: "Un desarrollador te dice: 'No puedo reproducir el bug, ciérralo'. Sin embargo, tú sigues pudiendo reproducirlo consistentemente en el entorno de QA. ¿Cuál es la mejor acción a seguir?",
+    options: [
+      "Cerrar el bug como solicita el desarrollador para evitar conflictos.",
+      "Escalar el problema a tu manager inmediatamente.",
+      "Grabar un video o GIF que muestre la reproducción del bug paso a paso, adjuntar logs y pedirle al desarrollador hacer una sesión de 'pairing' para investigarlo juntos.",
+      "Reabrir el bug sin añadir más información, simplemente comentando 'Sigue ocurriendo'."
+    ],
+    correctAnswer: "Grabar un video o GIF que muestre la reproducción del bug paso a paso, adjuntar logs y pedirle al desarrollador hacer una sesión de 'pairing' para investigarlo juntos.",
+    explanation: "El objetivo es la colaboración para resolver el problema. Proporcionar evidencia irrefutable (video) y ofrecerse a colaborar en tiempo real es la forma más efectiva de superar el 'no lo puedo reproducir'."
+  },
+  {
+    module: "Resolución de Escenarios",
+    question: "Un Product Owner te pide que valides una nueva funcionalidad, pero no existen historias de usuario ni criterios de aceptación formales. ¿Qué deberías hacer?",
+    options: [
+      "Rechazar la tarea hasta que la documentación esté completa y perfecta.",
+      "Inventar tus propios criterios de aceptación basándote en lo que crees que la funcionalidad debería hacer.",
+      "Iniciar una sesión de trabajo con el PO para definir y documentar juntos los criterios de aceptación clave antes de empezar las pruebas formales.",
+      "Empezar a probar la funcionalidad al azar con la esperanza de encontrar bugs."
+    ],
+    correctAnswer: "Iniciar una sesión de trabajo con el PO para definir y documentar juntos los criterios de aceptación clave antes de empezar las pruebas formales.",
+    explanation: "Un QA proactivo no es un bloqueador, sino un facilitador. En lugar de esperar pasivamente, el QA debe liderar el esfuerzo para definir la calidad y los requisitos cuando estos son ambiguos, colaborando con el negocio."
+  },
+  {
+    module: "Resolución de Escenarios",
+    question: "Un test de API que siempre había funcionado empieza a fallar con un error '503 Service Unavailable'. El código de la aplicación no ha cambiado. ¿Cuál es la causa más probable?",
+    options: [
+      "Se ha introducido un bug en la lógica de la aplicación.",
+      "La petición que estás enviando tiene un formato incorrecto (error 4xx).",
+      "Una dependencia externa de la API (otra API, una base de datos) está caída o no responde.",
+      "El test automatizado tiene un error de sintaxis."
+    ],
+    correctAnswer: "Una dependencia externa de la API (otra API, una base de datos) está caída o no responde.",
+    explanation: "Los errores del servidor de la serie 5xx indican un problema en el servidor. Un 503 específicamente significa que el servicio no está disponible, a menudo porque un componente crítico del que depende no está funcionando."
+  },
+  {
+    module: "Resolución de Escenarios",
+    question: "El equipo está a punto de lanzar una migración de base de datos importante. ¿Qué actividad de testing es la MÁS crítica para prevenir la pérdida o corrupción de datos?",
+    options: [
+      "Pruebas de UI para asegurar que la aplicación sigue funcionando después de la migración.",
+      "Pruebas de rendimiento para ver si la nueva base de datos es más rápida.",
+      "Validación de datos: escribir scripts para comparar los datos antes y después de la migración y asegurar su integridad y consistencia.",
+      "Pruebas de seguridad para asegurar que la nueva base de datos no tenga vulnerabilidades."
+    ],
+    correctAnswer: "Validación de datos: escribir scripts para comparar los datos antes y después de la migración y asegurar su integridad y consistencia.",
+    explanation: "En una migración, el mayor riesgo es la corrupción o pérdida de datos. La única forma de mitigar este riesgo es comparando directamente los datos de origen y destino para verificar que la migración se realizó correctamente."
+  },
+  {
+    module: "Resolución de Escenarios",
+    question: "Tu empresa está considerando adquirir una nueva herramienta de automatización de pruebas. ¿Qué factor debería ser el más importante en la decisión?",
+    options: [
+      "Elegir la herramienta más popular o la que está de moda en el mercado.",
+      "La curva de aprendizaje para el equipo actual y si se integra bien con el resto de las herramientas existentes (CI/CD, gestor de proyectos).",
+      "El costo de la licencia, eligiendo siempre la opción más barata.",
+      "La cantidad de funcionalidades que ofrece, aunque el equipo solo vaya a usar un 10% de ellas."
+    ],
+    correctAnswer: "La curva de aprendizaje para el equipo actual y si se integra bien con el resto de las herramientas existentes (CI/CD, gestor de proyectos).",
+    explanation: "Una herramienta solo es útil si el equipo puede usarla eficientemente y si encaja en el ecosistema tecnológico de la empresa. La mejor herramienta 'en el papel' puede ser un fracaso si nadie sabe cómo usarla o no se integra con el pipeline."
+  },
+  {
+    module: "Resolución de Escenarios",
+    question: "Se ha detectado un bug de seguridad crítico en producción. ¿Cuál es el rol del QA en el equipo de respuesta a incidentes?",
+    options: [
+      "El QA no tiene ningún rol, ya que es un problema de seguridad y no de calidad funcional.",
+      "Intentar escribir un script de explotación para demostrar el impacto del bug.",
+      "Una vez que el equipo de desarrollo propone un parche, el QA debe validar la corrección en un entorno de pre-producción y realizar pruebas de regresión enfocadas en seguridad.",
+      "Comunicar el incidente a todos los clientes a través de las redes sociales."
+    ],
+    correctAnswer: "Una vez que el equipo de desarrollo propone un parche, el QA debe validar la corrección en un entorno de pre-producción y realizar pruebas de regresión enfocadas en seguridad.",
+    explanation: "En una crisis, el rol del QA es crucial para validar que la solución de emergencia no solo corrige el problema, sino que no introduce nuevos fallos. La velocidad y la precisión en la validación son clave."
   }
 ];
 
 
 const MODULE_ORDER = [
   "Fundamentos de Pruebas",
-  "Pruebas en el Ciclo de Vida",
+  "Metodologías Ágiles y Scrum",
   "Técnicas de Prueba",
   "Gestión de Pruebas",
   "Automatización y Herramientas",
-  "Resolución de Escenarios",
-  "Metodologías Ágiles y Scrum"
+  "Resolución de Escenarios"
 ];
 
 const STUDY_SUGGESTIONS: { [key: string]: { title: string; description: string; steps: string[] } } = {
@@ -1175,8 +1403,11 @@ const ResultsScreen = ({ user, userAnswers, onRestart, onFinishEvaluation }: { u
         level = 'Junior (Jr)';
         levelColor = 'bg-yellow-500';
     }
+    
+    const uniqueModules = [...new Set(QA_QUESTIONS.map(q => q.module))];
+    const moduleOrder = MODULE_ORDER.filter(m => uniqueModules.includes(m));
 
-    const sortedModuleResults = MODULE_ORDER.map(moduleName => {
+    const sortedModuleResults = moduleOrder.map(moduleName => {
         const result = moduleResults[moduleName];
         const modulePercentage = result ? Math.round((result.correct / result.total) * 100) : 0;
         return { name: moduleName, ...result, percentage: modulePercentage };
@@ -1460,7 +1691,9 @@ const StudyScreen = ({ onBackToHome }: { onBackToHome: () => void }) => {
             onBackToHome();
         }
     };
-
+    
+    const uniqueModules = [...new Set(QA_QUESTIONS.map(q => q.module))];
+    const moduleOrder = MODULE_ORDER.filter(m => uniqueModules.includes(m));
     const moduleContent = selectedModule ? STUDY_CONTENT[selectedModule] : null;
 
     return (
@@ -1474,7 +1707,7 @@ const StudyScreen = ({ onBackToHome }: { onBackToHome: () => void }) => {
 
             {!selectedModule ? (
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                    {MODULE_ORDER.map(moduleName => (
+                    {moduleOrder.map(moduleName => (
                         <button 
                             key={moduleName}
                             onClick={() => setSelectedModule(moduleName)}
